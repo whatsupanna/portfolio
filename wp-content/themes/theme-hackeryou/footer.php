@@ -1,6 +1,9 @@
 <footer>
   <div class="container">
-    <p>&copy; HackerYou <?php echo date('Y'); ?></p>
+  	<div class="footerText">
+	  	<h3>Get to know me even better</h3>
+	    <p>&copy; Whats Up Anna <?php echo date('Y'); ?></p>
+    </div>
   </div>
 </footer>
 

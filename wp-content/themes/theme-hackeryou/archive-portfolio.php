@@ -1,31 +1,36 @@
 <?php get_header(); ?>
 
 <div class="main">
-  <div class="container">
+  <div class="container clearfix">
 
-    <div class="content">
+    <div class="content clearfix">
       <?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
 
-    <h2><?php the_title(); ?></h2>
-    <p><strong>Client Name: </strong><?php the_field('client_name'); ?></p>
-    <p><?php the_field('short_desc'); ?></p>
-    <?php //the_content(); ?>
+    <div class="portfolioBox">
+      <h2><?php the_title(); ?></h2>
+      <p><strong>Client Name: </strong><?php the_field('client_name'); ?></p>
 
-    <div class="images">
-      <?php while(has_sub_field('images')): ?>
-        <?php // for every image /caption combo, this code is run ?>
-        <figure>
-          <?php $image = get_sub_field('image');?> 
-          <img src="<?php echo $image['sizes']['square'] ?>" alt="<?php echo $image['title']; ?>">
-          <figcaption><?php the_sub_field('caption'); ?></figcaption>
-      </figure>
-      <?php endwhile; ?>
+      <?php the_terms($post->ID,'technologies',' ',''); ?>
+      <p><?php the_field('short_desc'); ?></p>
+      <p><?php the_field('tools_used'); ?></p>
+      <p><?php the_field('view_demo'); ?></p>
+      <?php //the_content(); ?>
 
+      <div class="images">
+        <?php while(has_sub_field('images')): ?>
+          <?php // for every image /caption combo, this code is run ?>
+          <figure>
+            <?php $image = get_sub_field('image');?> 
+            <img src="<?php echo $image['sizes']['large'] ?>" alt="<?php echo $image['title']; ?>">
+            <figcaption><?php the_sub_field('caption'); ?></figcaption>
+        </figure>
+        <?php endwhile; ?>  
+      </div>
+
+        
+      
     </div>
-
-    <h3>This is the featured image</h3>
-      <a href="<?php the_permalink(); ?>"><?php the_post_thumbnail('medium'); ?></a>
-    
+    <!-- end of portfolio box -->
 
 
 
