@@ -44,17 +44,22 @@ img.alignright    { padding-left: 5px; }
 
 body {
   color:#333;
+  font-family: 'Muli', sans-serif;
+}
+h3{
+  padding:0;
+  margin:0;
 }
 
 .container {
-/*  max-width:1200px;*/
+
   margin:0 auto;
 }
 
 .content {
-/*  float:left;*/
+
   width:100%;
-/*  margin-right: 5%;*/
+
 
 }
 
@@ -64,14 +69,8 @@ body {
 
 /* links */
 a {
-  color:#BA209B;
   text-decoration: none;
 }
-
-a:hover {
-  color: #D424B1;
-}
-
 /* paragraphs */
 p {
   line-height: 1.5;
@@ -105,11 +104,6 @@ dd {
   margin-left: 10px;
 }
 
-/*lists*/
-ul li,ol li {
-  padding:3px;
-}
-
 /*PRE*/
 
 pre {
@@ -121,17 +115,17 @@ pre {
 /* =============================================================================
                    Sidebar
    ========================================================================== */
-.sidebar {
-  width:30%;
-  float:left;
-}
-  .sidebar ul {
-    margin:0;
-    padding:0;
-  }
-    .sidebar ul li {
-      list-style: none;
-    }
+// .sidebar {
+//   width:30%;
+//   float:left;
+// }
+//   .sidebar ul {
+//     margin:0;
+//     padding:0;
+//   }
+//     .sidebar ul li {
+//       list-style: none;
+//     }
 
 
 
@@ -143,6 +137,12 @@ pre {
 footer {
   clear:both;
 }
+.contactFoot{
+  color:grey;
+}
+.contactFoot:hover{
+  color:black;
+}
 
 
 /* =============================================================================
@@ -152,17 +152,59 @@ footer {
     margin:0;
     padding:0;
   }
-    ul.menu li {
-      display:inline;
-      margin-right: 10px;
-    }
-
-      ul.menu li a {
-        color:#333;
-        padding:10px;
-        background:#333;
-        color:white;
+  .nav{
+    list-style-type: none;
+    padding: 0;
+    width: 70%;
+    display: none;
+    position: absolute;
+    width:auto;
+    top:40px;
+    left:170px;
+    text-transform: lowercase;
+      a{
+        color:black;
       }
+      a:hover{
+        color:#6D6E6F;
+      }
+   
+    li{
+      display: block;
+      padding: 5px 10px;
+    }
+  }
+
+  .headerBox{
+    width:90%;
+    margin:0 auto;
+    position: relative;
+  }
+
+     .logoBox{
+      // border: 5px solid black;
+      padding: 4px 5px;
+      display: inline-block;
+      font-size: 15px;
+      width:15%;
+      margin:0;
+      float:left;
+      a{
+         color:#ccc;
+         text-transform: lowercase;
+      }
+  }
+  .menu{
+    text-transform: lowercase;
+    color:#ccc;
+    display: inline-block;
+    padding-top: 5px;
+  }
+  div.arrow{
+    float:left;
+    padding-top:5px;
+    padding-right:3px;
+  }
 
 
 /* =============================================================================
@@ -297,7 +339,7 @@ p.form-allowed-tags, .nocomments { display:none; }
 /*Styles for Single Portfolio Page*/
 
 .pageTitle{
-  color:thistle;
+  color:#ccc;
   text-align: center;
 }
 
@@ -310,57 +352,27 @@ p.form-allowed-tags, .nocomments { display:none; }
 }
 
 
-/* =============================================================================
-                   Navigation
-   ========================================================================== */
 
-   .logoBox{
-    border: 5px solid black;
-    padding: 4px 20px;
-  float:left;
-    a{
-       color:black;
-    }
-}
-.headerBox{
-  border:1px solid green;
-}
-  .nav{
-    display: inline-block;
-    width: 75%;
-    float:left;
-    background: #ccc;
-    padding:30px 0;
-    margin-bottom: 5%;
-    border:1px solid red;
-    display: none;
-
-  }
-  ul.menu {
-    margin:0;
-    padding:0;
-    // li:hover{
-    //   background: black;
-    //   padding:30px 0;
-    // }
-  }
-    ul.menu li {
-      display:inline;
-      text-transform: uppercase;
-    }
-      ul.menu li a {
-        color:#333;
-        color:white;
-        text-decoration: none;
-
-      }
 /* =============================================================================
                    Footer Styles
    ========================================================================== */
 
 .footerText{
   text-align: center;
-  color:thistle;
+  color:black;
+}
+.footerNav{
+  margin:0;
+  padding:0;
+  li{
+    display: inline-block;
+  }
+  a{
+    color:#ccc;
+  }
+  a:hover{
+    color:black;
+  }
 }
 
 
@@ -368,14 +380,24 @@ p.form-allowed-tags, .nocomments { display:none; }
 /* =============================================================================
                    Portfolio Item Styles
    ========================================================================== */
-
-
-.portfolioBox{
+.wrapper {
   width:90%;
   margin:0 auto;
-  border:1px solid red;
+}
+
+.portfolioBox{
+  width:95%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin:0 auto;
+  // border:1px solid red;
   padding:5px;
   position: relative;
+  h2{
+    margin: 0;
+  }
 }
 .images{
   display: inline-block;
@@ -383,16 +405,56 @@ p.form-allowed-tags, .nocomments { display:none; }
 }
 .featuredPost{
   float:left;
-  width:30%;
-  position: absolute;
+  width:50%;
   z-index: 10;
+  height: auto;
+  padding:50px;
+    .pieceTitle{
+      font-size: 50px;
+      font-weight: 200;
+      font-family: 'Muli', sans-serif;
+      color:black;
+    }
+    .tools{
+      font-size: 15px;
+      text-transform: uppercase;
+      color:#6D6E6F;
+    }
+    .description{
+      font-size: 15px;
+      color:#6D6E6F;
+    }
+    a{
+      padding:5px 10px;
+      display: inline-block;
+      color:black;
+      transition:all 0.2s ease;
+    }
+    a:hover{
+      color:#6D6E6F;
+      border:2px solid #6D6E6F;
+    }
+  // background: rgba(255,255,255,0.8);
 }
 .imageHolder{
   float:right;
-  top:50%;
-  width:80%;
-  img{
-    // float:left;
-
+  width:50%;
+  border-radius: 10px;
+}
+.demo{
+  border: 2px solid black;
+  padding:0;
+  font-size:15px;
+  h3{
+    padding:0;
   }
+
+}
+.animate.visible {
+  opacity:1;
+  transform:translateX(0);
+}
+.box{
+  opacity: 0;
+  transform:translateX(-100%);
 }

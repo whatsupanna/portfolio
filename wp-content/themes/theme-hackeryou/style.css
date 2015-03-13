@@ -170,27 +170,25 @@ img.alignright {
                    Default Styling
    ========================================================================== */
 body {
-  color: #333; }
+  color: #333;
+  font-family: 'Muli', sans-serif; }
+
+h3 {
+  padding: 0;
+  margin: 0; }
 
 .container {
-  /*  max-width:1200px;*/
   margin: 0 auto; }
 
 .content {
-  /*  float:left;*/
-  width: 100%;
-  /*  margin-right: 5%;*/ }
+  width: 100%; }
 
 .full {
   width: 100%; }
 
 /* links */
 a {
-  color: #BA209B;
   text-decoration: none; }
-
-a:hover {
-  color: #D424B1; }
 
 /* paragraphs */
 p {
@@ -221,10 +219,6 @@ dd {
   padding: 10px;
   margin-left: 10px; }
 
-/*lists*/
-ul li, ol li {
-  padding: 3px; }
-
 /*PRE*/
 pre {
   background: #F7F7F7;
@@ -235,22 +229,17 @@ pre {
 /* =============================================================================
                    Sidebar
    ========================================================================== */
-.sidebar {
-  width: 30%;
-  float: left; }
-
-.sidebar ul {
-  margin: 0;
-  padding: 0; }
-
-.sidebar ul li {
-  list-style: none; }
-
 /* =============================================================================
                    Footer
    ========================================================================== */
 footer {
   clear: both; }
+
+.contactFoot {
+  color: grey; }
+
+.contactFoot:hover {
+  color: black; }
 
 /* =============================================================================
                    Navigation
@@ -259,15 +248,50 @@ ul.menu {
   margin: 0;
   padding: 0; }
 
-ul.menu li {
-  display: inline;
-  margin-right: 10px; }
+.nav {
+  list-style-type: none;
+  padding: 0;
+  width: 70%;
+  display: none;
+  position: absolute;
+  width: auto;
+  top: 40px;
+  left: 170px;
+  text-transform: lowercase; }
+  .nav a {
+    color: black; }
+  .nav a:hover {
+    color: #6D6E6F; }
+  .nav li {
+    display: block;
+    padding: 5px 10px; }
 
-ul.menu li a {
-  color: #333;
-  padding: 10px;
-  background: #333;
-  color: white; }
+.headerBox {
+  width: 90%;
+  margin: 0 auto;
+  position: relative; }
+
+.logoBox {
+  padding: 4px 5px;
+  display: inline-block;
+  font-size: 15px;
+  width: 15%;
+  margin: 0;
+  float: left; }
+  .logoBox a {
+    color: #ccc;
+    text-transform: lowercase; }
+
+.menu {
+  text-transform: lowercase;
+  color: #ccc;
+  display: inline-block;
+  padding-top: 5px; }
+
+div.arrow {
+  float: left;
+  padding-top: 5px;
+  padding-right: 3px; }
 
 /* =============================================================================
                    Comment Styling
@@ -443,7 +467,7 @@ p.form-allowed-tags, .nocomments {
 
 /*Styles for Single Portfolio Page*/
 .pageTitle {
-  color: thistle;
+  color: #ccc;
   text-align: center; }
 
 .sectionWrapper {
@@ -454,68 +478,87 @@ p.form-allowed-tags, .nocomments {
   color: red; }
 
 /* =============================================================================
-                   Navigation
-   ========================================================================== */
-.logoBox {
-  border: 5px solid black;
-  padding: 4px 20px;
-  float: left; }
-  .logoBox a {
-    color: black; }
-
-.headerBox {
-  border: 1px solid green; }
-
-.nav {
-  display: inline-block;
-  width: 75%;
-  float: left;
-  background: #ccc;
-  padding: 30px 0;
-  margin-bottom: 5%;
-  border: 1px solid red;
-  display: none; }
-
-ul.menu {
-  margin: 0;
-  padding: 0; }
-
-ul.menu li {
-  display: inline;
-  text-transform: uppercase; }
-
-ul.menu li a {
-  color: #333;
-  color: white;
-  text-decoration: none; }
-
-/* =============================================================================
                    Footer Styles
    ========================================================================== */
 .footerText {
   text-align: center;
-  color: thistle; }
+  color: black; }
+
+.footerNav {
+  margin: 0;
+  padding: 0; }
+  .footerNav li {
+    display: inline-block; }
+  .footerNav a {
+    color: #ccc; }
+  .footerNav a:hover {
+    color: black; }
 
 /* =============================================================================
                    Portfolio Item Styles
    ========================================================================== */
-.portfolioBox {
+.wrapper {
   width: 90%;
+  margin: 0 auto; }
+
+.portfolioBox {
+  width: 95%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
   margin: 0 auto;
-  border: 1px solid red;
   padding: 5px;
   position: relative; }
+  .portfolioBox h2 {
+    margin: 0; }
 
 .images {
   display: inline-block; }
 
 .featuredPost {
   float: left;
-  width: 30%;
-  position: absolute;
-  z-index: 10; }
+  width: 50%;
+  z-index: 10;
+  height: auto;
+  padding: 50px; }
+  .featuredPost .pieceTitle {
+    font-size: 50px;
+    font-weight: 200;
+    font-family: 'Muli', sans-serif;
+    color: black; }
+  .featuredPost .tools {
+    font-size: 15px;
+    text-transform: uppercase;
+    color: #6D6E6F; }
+  .featuredPost .description {
+    font-size: 15px;
+    color: #6D6E6F; }
+  .featuredPost a {
+    padding: 5px 10px;
+    display: inline-block;
+    color: black;
+    transition: all 0.2s ease; }
+  .featuredPost a:hover {
+    color: #6D6E6F;
+    border: 2px solid #6D6E6F; }
 
 .imageHolder {
   float: right;
-  top: 50%;
-  width: 80%; }
+  width: 50%;
+  border-radius: 10px; }
+
+.demo {
+  border: 2px solid black;
+  padding: 0;
+  font-size: 15px; }
+  .demo h3 {
+    padding: 0; }
+
+.animate.visible {
+  opacity: 1;
+  transform: translateX(0); }
+
+.box {
+  opacity: 0;
+  transform: translateX(-100%); }
