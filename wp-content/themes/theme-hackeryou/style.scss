@@ -495,3 +495,56 @@ p.form-allowed-tags, .nocomments { display:none; }
    section {
     padding: 10%;
    }
+
+/* =============================================================================
+                   About Me Styles
+   ========================================================================== */
+
+.bio{ // wrapper of content
+  padding-top:50px;
+  margin:0 auto;
+  width:80%;
+}
+
+.bioContent {
+  float:left;
+
+  &.bioContentAbout {
+    width:70%;
+    p {
+      color:black;
+      font-size: 14px;
+      padding:50px;
+    }
+  } // bioContentAbout
+
+  &.bioContentImage {
+    width:30%;
+    img {
+      border-radius:50%;
+    }
+  } // bioContentImage
+
+} // end bioContent
+
+/* =============================================================================
+                   BLog Styles
+   ========================================================================== */
+
+.blogsectionTitle{
+  color:grey;
+  a{
+    color:grey;
+    &:hover{
+      color:black;
+    }
+  }
+}
+.blogExcerpt{
+  margin:10%;
+}
+.readMore{
+  color:#6E495E;
+}
+
+

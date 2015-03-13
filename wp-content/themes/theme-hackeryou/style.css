@@ -591,3 +591,40 @@ ul.news li {
 
 section {
   padding: 10%; }
+
+/* =============================================================================
+                   About Me Styles
+   ========================================================================== */
+.bio {
+  padding-top: 50px;
+  margin: 0 auto;
+  width: 80%; }
+
+.bioContent {
+  float: left; }
+  .bioContent.bioContentAbout {
+    width: 70%; }
+    .bioContent.bioContentAbout p {
+      color: black;
+      font-size: 14px;
+      padding: 50px; }
+  .bioContent.bioContentImage {
+    width: 30%; }
+    .bioContent.bioContentImage img {
+      border-radius: 50%; }
+
+/* =============================================================================
+                   BLog Styles
+   ========================================================================== */
+.blogsectionTitle {
+  color: grey; }
+  .blogsectionTitle a {
+    color: grey; }
+    .blogsectionTitle a:hover {
+      color: black; }
+
+.blogExcerpt {
+  margin: 10%; }
+
+.readMore {
+  color: #6E495E; }

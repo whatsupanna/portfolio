@@ -16,22 +16,31 @@ get_header();  ?>
 	      <h2><?php //the_title(); ?></h2>
 	      <?php the_content(); ?>
 
-		<section class="bio">
-			<figure>
-				
+		<div class="bio clearfix">
+
+			<div class="bioContent bioContentAbout"> 
+				<?php if (get_field('bio') ):?>
+
+				<p><?php the_field('bio'); ?></p>
+			</div>
+
+			<div class="bioContent bioContentImage">
 				<?php if( get_field('picture') ): ?>
 
-					<img src="<?php the_field('picture'); ?>" />
+				<img src="<?php the_field('picture'); ?>" />
 
 				<?php endif; ?>
-			</figure>
-			<?php if (get_field('bio') ):?>
-			<p><?php the_field('bio'); ?></p>
+			</div>
+
+		</div>
+		<!-- end of bio -->
+	
 		<?php endif; ?>
 
-		</section>
+		
 
-		<section class="blog">
+		<div class="blog scrollWrapper hidden">
+			<div class="scroll-bar"></div>
 			<ul class="news">
 			<?php
 			$projectQuery = new WP_Query( 
@@ -48,12 +57,12 @@ get_header();  ?>
 					<?php echo get_the_post_thumbnail( $post->ID); ?> 
 						
 							<li>
-								<h3>
+								<h3 class="blogsectionTitle">
 									<a href="<?php the_permalink(); ?>">
 										<?php the_title(); ?>
 									</a>
 								</h3>
-								<p><?php the_excerpt(); ?></p>
+								<p class="blogExcerpt"><?php the_excerpt(); ?></p>
 							</li>
 						
 				<?php endwhile; ?>
@@ -64,7 +73,7 @@ get_header();  ?>
 				
 			<?php endif; ?>
 			</ul>
-		</section>
+		</div>
 		<section class="portfolio">
 				    <?php // we are going to pull in our latest 4 blogposts ?>
 				    <?php $latestPosts = new WP_Query(array(
@@ -74,10 +83,10 @@ get_header();  ?>
 				    )); ?>
 
 				    <?php if($latestPosts->have_posts()) while($latestPosts->have_posts()) : $latestPosts->the_post(); ?>
-				    	<div class="portfolioBox clearfix">
+				    	<div class="portfolioBox clearfix scrollWrapper hidden">
 					    	<div class="featuredPost">
 
-					    		<h2 class="pieceTitle"><?php the_title(); ?></h2>
+					    		<h3 class="pieceTitle"><?php the_title(); ?></h3>
 					    		<p class="description"><?php the_field('about_me'); ?></p>
 					    
 					    
