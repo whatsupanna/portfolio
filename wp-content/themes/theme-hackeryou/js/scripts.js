@@ -1,5 +1,6 @@
 $(function(){
-	$('.menu').on('click',function() {
+	$('.arrow').on('click',function() {
+		 console.log('Im working!')
 		$('.nav').slideToggle();
 	});
 

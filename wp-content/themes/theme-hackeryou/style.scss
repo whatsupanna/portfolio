@@ -113,21 +113,24 @@ pre {
   border:1px solid #ccc;
 }
 /* =============================================================================
-                   Sidebar
+                   Arrow Spin
    ========================================================================== */
-// .sidebar {
-//   width:30%;
-//   float:left;
-// }
-//   .sidebar ul {
-//     margin:0;
-//     padding:0;
-//   }
-//     .sidebar ul li {
-//       list-style: none;
-//     }
-
-
+   // keyframes animate{
+   //  0%{transform:rotate(0);}
+   //  50%{transform: rotate(180deg);}
+   //  100%{transform:rotate(360deg);}
+   // }
+   // @-webkit-keyframes animate{
+   //  0%{transform:rotate(0);}
+   //  50%{transform: rotate(180deg);}
+   //  100%{transform:rotate(360deg);}
+   // }
+   
+   // .arrow2{
+   //  position:absolute;
+   //  animation: animate 0.2s linear;
+   //  -webkit-animation: animate 0.2s linear;
+   // }
 
 
 /* =============================================================================
@@ -159,9 +162,10 @@ footer {
     display: none;
     position: absolute;
     width:auto;
-    top:40px;
-    left:170px;
+    top:100%;
+    left:0;
     text-transform: lowercase;
+    background: white;
       a{
         color:black;
       }
@@ -176,20 +180,25 @@ footer {
   }
 
   .headerBox{
-    width:90%;
-    margin:0 auto;
-    position: relative;
+    width:100%;
+    position: fixed;
+    background: white;
+    top: 0;
+    left: 0;
+    padding: 20px;
+    font-size: 0;
+    z-index: 9999999999999999999999999999999999999;
   }
 
      .logoBox{
       // border: 5px solid black;
-      padding: 4px 5px;
+      
       display: inline-block;
       font-size: 15px;
       width:15%;
       margin:0;
-      float:left;
-      a{
+      vertical-align: middle;
+           a{
          color:#ccc;
          text-transform: lowercase;
       }
@@ -199,11 +208,19 @@ footer {
     color:#ccc;
     display: inline-block;
     padding-top: 5px;
+    font-size: 16px;
   }
   div.arrow{
-    float:left;
-    padding-top:5px;
+    display: inline-block;
+    width: 85%;
     padding-right:3px;
+    cursor: pointer;
+    position: relative;
+    font-size: 16px;
+    vertical-align: middle;
+    @media (max-width: 500px){
+      text-align: right;
+    }
   }
 
 
@@ -458,3 +475,23 @@ p.form-allowed-tags, .nocomments { display:none; }
   opacity: 0;
   transform:translateX(-100%);
 }
+
+/* =============================================================================
+                   News
+   ========================================================================== */
+
+   ul.news {
+    padding: 0;
+    font-size: 0;
+   }
+
+   ul.news li {
+    display: inline-block;
+    width: 33%;
+    font-size: 16px;
+    vertical-align: top;
+   }
+
+   section {
+    padding: 10%;
+   }

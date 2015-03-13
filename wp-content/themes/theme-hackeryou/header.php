@@ -27,13 +27,7 @@
           </a>
         </h3>
       </div>
-      <nav class="nav clearfix">
-        <?php wp_nav_menu( array(
-          'container' => false,
-          'container_id' => 'nav',
-          'menu' => 'main'
-        )); ?>
-      </nav>
+      
 
       
         <div class="arrow">
@@ -47,8 +41,16 @@
               </g>    
               </g>
           </svg>
-          </div>  
+           
       <span class="menu">Menu</span>
+      <nav class="nav clearfix">
+        <?php wp_nav_menu( array(
+          'container' => false,
+          'container_id' => 'nav',
+          'menu' => 'main'
+        )); ?>
+      </nav>
+      </div> 
    </div>
     
   </div> <!-- /.container -->

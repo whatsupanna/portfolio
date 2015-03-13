@@ -227,7 +227,7 @@ pre {
   border: 1px solid #ccc; }
 
 /* =============================================================================
-                   Sidebar
+                   Arrow Spin
    ========================================================================== */
 /* =============================================================================
                    Footer
@@ -255,9 +255,10 @@ ul.menu {
   display: none;
   position: absolute;
   width: auto;
-  top: 40px;
-  left: 170px;
-  text-transform: lowercase; }
+  top: 100%;
+  left: 0;
+  text-transform: lowercase;
+  background: white; }
   .nav a {
     color: black; }
   .nav a:hover {
@@ -267,17 +268,21 @@ ul.menu {
     padding: 5px 10px; }
 
 .headerBox {
-  width: 90%;
-  margin: 0 auto;
-  position: relative; }
+  width: 100%;
+  position: fixed;
+  background: white;
+  top: 0;
+  left: 0;
+  padding: 20px;
+  font-size: 0;
+  z-index: 9999999999999999999999999999999999999; }
 
 .logoBox {
-  padding: 4px 5px;
   display: inline-block;
   font-size: 15px;
   width: 15%;
   margin: 0;
-  float: left; }
+  vertical-align: middle; }
   .logoBox a {
     color: #ccc;
     text-transform: lowercase; }
@@ -286,12 +291,20 @@ ul.menu {
   text-transform: lowercase;
   color: #ccc;
   display: inline-block;
-  padding-top: 5px; }
+  padding-top: 5px;
+  font-size: 16px; }
 
 div.arrow {
-  float: left;
-  padding-top: 5px;
-  padding-right: 3px; }
+  display: inline-block;
+  width: 85%;
+  padding-right: 3px;
+  cursor: pointer;
+  position: relative;
+  font-size: 16px;
+  vertical-align: middle; }
+  @media (max-width: 500px) {
+    div.arrow {
+      text-align: right; } }
 
 /* =============================================================================
                    Comment Styling
@@ -562,3 +575,19 @@ p.form-allowed-tags, .nocomments {
 .box {
   opacity: 0;
   transform: translateX(-100%); }
+
+/* =============================================================================
+                   News
+   ========================================================================== */
+ul.news {
+  padding: 0;
+  font-size: 0; }
+
+ul.news li {
+  display: inline-block;
+  width: 33%;
+  font-size: 16px;
+  vertical-align: top; }
+
+section {
+  padding: 10%; }
