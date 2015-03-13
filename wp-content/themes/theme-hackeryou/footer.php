@@ -18,8 +18,7 @@
     </div>
   </div>
 </footer>
-<script src="jquery.progressScroll.js"></script>
-<script src="<?php bloginfo('template_directory') ?>/js/jquery.progressScroll.js"></script>
+
 
 <script>
 /* Google Analytics! */

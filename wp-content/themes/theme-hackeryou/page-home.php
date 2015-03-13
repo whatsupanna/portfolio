@@ -17,20 +17,26 @@ get_header();  ?>
 	      <?php the_content(); ?>
 
 		<div class="bio clearfix">
+			<div class="contentWrap">
+				<div class="bioContent bioContentAbout"> 
 
-			<div class="bioContent bioContentAbout"> 
-				<?php if (get_field('bio') ):?>
+					<?php if (get_field('bio') ):?>
 
-				<p><?php the_field('bio'); ?></p>
-			</div>
+					<p class="bioText"><?php the_field('bio'); ?>
+					<a class="aboutLink" href="#">Learn More</a>
+					</p>
 
-			<div class="bioContent bioContentImage">
-				<?php if( get_field('picture') ): ?>
+					
+				</div>
 
-				<img src="<?php the_field('picture'); ?>" />
+				<div class="bioContent bioContentImage">
+					<?php if( get_field('picture') ): ?>
 
-				<?php endif; ?>
-			</div>
+					<img src="<?php the_field('picture'); ?>" />
+
+					<?php endif; ?>
+				</div>
+			</div> <!-- ed .contentWrap -->
 
 		</div>
 		<!-- end of bio -->
@@ -39,9 +45,9 @@ get_header();  ?>
 
 		
 
-		<div class="blog scrollWrapper hidden">
-			<div class="scroll-bar"></div>
-			<ul class="news">
+		<div class="blog clearfix">
+			<h2 class="newsHeading">Latest News</h2>
+			<div class="news">
 			<?php
 			$projectQuery = new WP_Query( 
 				array( 
@@ -54,16 +60,18 @@ get_header();  ?>
 
 				<?php while ($projectQuery->have_posts()) : $projectQuery->the_post(); ?>
 
-					<?php echo get_the_post_thumbnail( $post->ID); ?> 
+			
 						
-							<li>
+							<div class="newsPost">
 								<h3 class="blogsectionTitle">
 									<a href="<?php the_permalink(); ?>">
 										<?php the_title(); ?>
 									</a>
 								</h3>
+								<div class="blogPic"><?php echo get_the_post_thumbnail( $post->ID, 'large'); ?> </div>
 								<p class="blogExcerpt"><?php the_excerpt(); ?></p>
-							</li>
+								
+							</div>
 						
 				<?php endwhile; ?>
 				
@@ -72,7 +80,7 @@ get_header();  ?>
 			<?php else:  ?>
 				
 			<?php endif; ?>
-			</ul>
+			</div>
 		</div>
 		<section class="portfolio">
 				    <?php // we are going to pull in our latest 4 blogposts ?>
@@ -83,8 +91,8 @@ get_header();  ?>
 				    )); ?>
 
 				    <?php if($latestPosts->have_posts()) while($latestPosts->have_posts()) : $latestPosts->the_post(); ?>
-				    	<div class="portfolioBox clearfix scrollWrapper hidden">
-					    	<div class="featuredPost">
+				    	<div class="portfolioBox clearfix">
+					    	<div class="featuredPost animate">
 
 					    		<h3 class="pieceTitle"><?php the_title(); ?></h3>
 					    		<p class="description"><?php the_field('about_me'); ?></p>

@@ -63,10 +63,18 @@ function hackeryou_scripts() {
     true //load in footer
   );
 
+  // wp_enqueue_script(
+  //   'progressScroll', //handle
+  //   get_template_directory_uri() . '/js/jquery.progressScroll.js', //source
+  //   array('jquery'), //dependencies
+  //   null, // version number
+  //   true //load in footer
+  // );
+
   wp_enqueue_script(
     'scripts', //handle
     get_template_directory_uri() . '/js/scripts.js', //source
-    array( 'jquery', 'plugins' ), //dependencies
+    array( 'jquery', 'plugins'), //dependencies
     null, // version number
     true //load in footer
   );
