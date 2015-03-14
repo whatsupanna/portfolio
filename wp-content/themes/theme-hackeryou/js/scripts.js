@@ -1,9 +1,8 @@
 var $ = jQuery;
 $(function(){
 
-	console.log('test');
+	smoothScroll.init();
 	$('.arrow').on('click',function() {
-		 console.log('Im working!')
 		$('.nav').slideToggle();
 	});
 
@@ -19,18 +18,18 @@ $(function(){
       return ((elemBottom <= docViewBottom) && (elemTop >= docViewTop));
   }
 
-  $(window).on('scroll',function() {
+    $(window).on('scroll',function() {
 
 
-  	$('.animate').each(function() {
-  		// cache the current box
-  		var $el = $(this);
-	  	if(isScrolledIntoView($el)) {
-	  		$el.addClass('visible');
-	  	}
+    	$('.animate').each(function() {
+    		// cache the current box
+    		var $el = $(this);
+  	  	if(isScrolledIntoView($el)) {
+  	  		$el.addClass('visible');
+  	  	}
 
-  	});
-  });
+    	});
+    });
 
   });
 

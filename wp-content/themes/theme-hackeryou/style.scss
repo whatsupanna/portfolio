@@ -52,16 +52,13 @@ h3{
   margin:0;
 }
 
-.container {
-
+.containerBox {
   margin:0 auto;
+  position: relative;
 }
 
 .content {
-
   width:100%;
-
-
 }
 
 .full {
@@ -134,11 +131,7 @@ footer {
    ========================================================================== */
 
   header{
-    position: fixed;
-    top: 0;
-    left: 0;
     width: 100%;
-    background: #ccc;
     z-index: 999999999999999999999999999999999999;
   }
   ul.menu {
@@ -150,11 +143,9 @@ footer {
     padding: 0;
     width: 70%;
     display: none;
-    position: absolute;
     width:auto;
-    top:100%;
-    left:0;
-    background: #f2f2f2 ;
+    position: absolute;
+    background: white ;
     text-transform: lowercase;
       a{
         color:black;
@@ -171,14 +162,11 @@ footer {
 
   .headerBox{
     width:100%;
-    position: fixed;
     background: white;
-    top: 0;
-    left: 0;
-    padding: 20px;
+    padding:20px;
+    padding-bottom: 60px;
     font-size: 0;
     text-transform: lowercase;
-    // transform:translateY(-100%);
     z-index: 9999999999999999999999999999999999999;
   }
 
@@ -187,10 +175,11 @@ footer {
       font-size: 15px;
       width:15%;
       margin:0;
+      position: relative;
       text-transform: lowercase;
       vertical-align: middle;
            a{
-         color:black;
+         color:rgba(0,0,0,0.9);
       }
   }
   .menu{
@@ -206,12 +195,25 @@ footer {
     cursor: pointer;
     position: relative;
     font-size: 16px;
-    vertical-align: middle;
+    vertical-align: top;
     @media (max-width: 500px){
       text-align: right;
     }
   }
-  
+
+  .headArrow{
+    font-weight: 300;
+    position: absolute;
+    left:50%;
+    top:90%;
+    .arrowLink{
+      text-decoration: none;
+      color:rgba(0,0,0,0.7);
+      outline: none;
+    }
+    // transform:translateX(-50%);
+    // transform:translateY(50%);
+  }
 
 
 /* =============================================================================
@@ -451,11 +453,12 @@ p.form-allowed-tags, .nocomments { display:none; }
   border-radius: 10px;
 }
 .demo{
-  border: 2px solid black;
+  border: 2px solid rgba(0,0,0,0.5);
   padding:0;
   font-size:15px;
   h3{
     padding:0;
+    color:rgba(0,0,0,0.9);
   }
 
 }
@@ -482,7 +485,6 @@ p.form-allowed-tags, .nocomments { display:none; }
         padding:20px;
         margin:1%;
         background:#FBFBFB;
-        // border:2px solid black;
         float:left;
         width: 31%;
         min-height: 100px;
@@ -505,7 +507,7 @@ p.form-allowed-tags, .nocomments { display:none; }
 
 .bio{ // wrapper of content
 
-  padding:200px 30px;
+  padding:100px 30px;
   // padding-top: 80px;
   margin:0 auto;
   width:80%;
@@ -538,9 +540,7 @@ p.form-allowed-tags, .nocomments { display:none; }
   padding:10px 25px;
   transition:all 0.2s;
   &:hover{
-    color:$grey;
-    border:2px solid $grey;
-    
+    color:$grey;    
   }
 }
 /* =============================================================================
@@ -549,6 +549,7 @@ p.form-allowed-tags, .nocomments { display:none; }
 .blog{
   width:80%;
   margin:0 auto;
+  padding-top: 50px;
 
 }
 .blogsectionTitle{
@@ -585,20 +586,31 @@ p.form-allowed-tags, .nocomments { display:none; }
 /* =============================================================================
                    About Me Page Styles
    ========================================================================== */
-
+.page-Id-63.headerBox{
+  padding-bottom: 0;
+}
 .aboutWrapper{
-  width:80%;
-  padding-top:50px;
+  width:90%;
   margin:0 auto;
 }
+
+.aboutpageImage{
+  // padding-bottom: 100px;
+}
 .aboutpagePicture{
-  max-width: 50%;
+  max-width: 48%;
   margin:0 auto;
+  float:left;
+  margin:2%;
+}
+.aboutPageContent{
+  width:45%;
+  float:left;
 }
 .aboutpageHeading{
   text-transform: lowercase;
-  font-weight: 300;
-  font-size: 50px;
+  font-weight: 500;
+  font-size: 45px;
 }
 .aboutpageText{
   padding:15px 20px;
@@ -606,25 +618,184 @@ p.form-allowed-tags, .nocomments { display:none; }
 }
 .aboutpageTitle{
   font-weight: 200;
-  padding:15px 20px;
-  font-size: 28px;
+  font-size: 30px;
+  text-transform: lowercase;
 }
+
+.skillsContent{
+  padding:0;
+  width:100%;
+  margin:0 auto;
+  color:rgab(0,0,0,0.8);
+  .listHeader{
+    font-weight: 300;
+  }
+  .block{
+    width: 30%;
+    min-height: 250px;
+    padding:10px 15px;
+    margin:0 1.5%;
+    background: #FBFBFB;
+    float:left;
+    .list{
+      padding:0;
+      margin:0;
+      list-style:none;
+     
+      color:rgab(0,0,0,0.8);
+      padding:10px 15px;
+      box-shadow: 0 0 20px white;
+    }
+  }
+}
+
+
 
 /* =============================================================================
                    Header Animation Styles
    ========================================================================== */
 .main-title {
   position: absolute;
-  font-size: 50px;
+  font-size: 45px;
   font-weight: 200;
   text-shadow: inset 0 0 15px white;
+  border: 10px double #666;
   margin: 0;
   padding: 0;
-  color: #666;
+  color: white;
   padding:10px 15px;
   text-align: center;
   top: 50%;
   left: 50%;
   -webkit-transform: translate3d(-50%,-50%,0);
   transform: translate3d(-50%,-50%,0);
+  text-shadow: 
+        /* first layer at 1px */
+        -1px -1px 0px #666,
+         0px -1px 0px #666,
+         1px -1px 0px #666,
+        -1px  0px 0px #666,
+         1px  0px 0px #666,
+        -1px  1px 0px #666,
+         0px  1px 0px #666,
+         1px  1px 0px #666,
+        /* second layer at 2px */
+        -2px -2px 0px #666,
+        -1px -2px 0px #666,
+         0px -2px 0px #666,
+         1px -2px 0px #666,
+         2px -2px 0px #666,
+         2px -1px 0px #666,
+         2px  0px 0px #666,
+         2px  1px 0px #666,
+         2px  2px 0px #666,
+         1px  2px 0px #666,
+         0px  2px 0px #666,
+        -1px  2px 0px #666,
+        -2px  2px 0px #666,
+        -2px  1px 0px #666,
+        -2px  0px 0px #666,
+        -2px -1px 0px #666;
+}
+
+
+/* =============================================================================
+                   Bounce Animation
+   ========================================================================== */
+
+.animated {
+  -webkit-animation-duration: 2s;
+  animation-duration: 2s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+.animated.infinite {
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+}
+
+@-webkit-keyframes bounce {
+  0%, 20%, 53%, 80%, 100% {
+    -webkit-transition-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+    transition-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+    -webkit-transform: translate3d(0,0,0);
+    transform: translate3d(0,0,0);
+  }
+
+  40%, 43% {
+    -webkit-transition-timing-function: cubic-bezier(0.755, 0.050, 0.855, 0.060);
+    transition-timing-function: cubic-bezier(0.755, 0.050, 0.855, 0.060);
+    -webkit-transform: translate3d(0, -30px, 0);
+    transform: translate3d(0, -30px, 0);
+  }
+
+  70% {
+    -webkit-transition-timing-function: cubic-bezier(0.755, 0.050, 0.855, 0.060);
+    transition-timing-function: cubic-bezier(0.755, 0.050, 0.855, 0.060);
+    -webkit-transform: translate3d(0, -15px, 0);
+    transform: translate3d(0, -15px, 0);
+  }
+
+  90% {
+    -webkit-transform: translate3d(0,-4px,0);
+    transform: translate3d(0,-4px,0);
+  }
+}
+
+@keyframes bounce {
+  0%, 20%, 53%, 80%, 100% {
+    -webkit-transition-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+    transition-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+    -webkit-transform: translate3d(0,0,0);
+    -ms-transform: translate3d(0,0,0);
+    transform: translate3d(0,0,0);
+  }
+
+  40%, 43% {
+    -webkit-transition-timing-function: cubic-bezier(0.755, 0.050, 0.855, 0.060);
+    transition-timing-function: cubic-bezier(0.755, 0.050, 0.855, 0.060);
+    -webkit-transform: translate3d(0, -30px, 0);
+    -ms-transform: translate3d(0, -30px, 0);
+    transform: translate3d(0, -30px, 0);
+  }
+
+  70% {
+    -webkit-transition-timing-function: cubic-bezier(0.755, 0.050, 0.855, 0.060);
+    transition-timing-function: cubic-bezier(0.755, 0.050, 0.855, 0.060);
+    -webkit-transform: translate3d(0, -15px, 0);
+    -ms-transform: translate3d(0, -15px, 0);
+    transform: translate3d(0, -15px, 0);
+  }
+
+  90% {
+    -webkit-transform: translate3d(0,-4px,0);
+    -ms-transform: translate3d(0,-4px,0);
+    transform: translate3d(0,-4px,0);
+  }
+}
+
+.bounce {
+  -webkit-animation-name: bounce;
+  animation-name: bounce;
+  -webkit-transform-origin: center bottom;
+  -ms-transform-origin: center bottom;
+  transform-origin: center bottom;
+}
+
+
+/* =============================================================================
+                   Blog Page Styles
+   ========================================================================== */
+
+.blogPageTitle{
+  text-decoration: none;
+  color:rgba(0,0,0,0.8);
+}
+.entry-title{
+  font-weight: 300;
+
+}
+.entry-content{
+  background: #f2f2f2;
 }

@@ -5,6 +5,7 @@
   <meta charset="<?php bloginfo( 'charset' ); ?>" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title><?php  wp_title('|', true, 'right'); ?></title>
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
  <link href='http://fonts.googleapis.com/css?family=Lato:300,400,700,900,700italic' rel='stylesheet' type='text/css'>
   <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
 
@@ -16,9 +17,22 @@
 
 
 <body <?php body_class(); ?>>
+<?php if (is_front_page()) {?>
+  <div class="container demo-3">
+    <div class="content">
+              <div id="large-header" class="large-header">
+                  <canvas id="demo-canvas"></canvas>
+                  <h1 class="main-title">What's up Anna?</span></h1>
+              </div>
+    </div>
 
+    <div class="headArrow">
+      <a class="arrowLink" data-scroll href="#bazinga"><i class="fa fa-arrow-down animated bounce infinite"></i></a>
+    </div>
+  <?php } ?>
 <header>
-  <div class="container clearfix">
+  <div class="containerBox clearfix">
+
     <div class="headerBox clearfix animate">
       <div class="logoBox">
         <h3>
@@ -27,8 +41,7 @@
           </a>
         </h3>
       </div>
-      
-
+      <!-- end of logobox -->
       
         <div class="arrow">
           <svg class="arrowIcon" width="10px" height="10px" viewBox="0 0 110 52" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
@@ -42,17 +55,19 @@
               </g>
           </svg>
            
-      <span class="menu">Menu</span>
-      <nav class="nav clearfix">
-        <?php wp_nav_menu( array(
-          'container' => false,
-          'container_id' => 'nav',
-          'menu' => 'main'
-        )); ?>
-      </nav>
+        <span class="menu">Menu</span>
+        <nav class="nav clearfix">
+          <?php wp_nav_menu( array(
+            'container' => false,
+            'container_id' => 'nav',
+            'menu' => 'main'
+          )); ?>
+        </nav>
+        <span id="bazinga">Bazinga!</span>
       </div> 
-   </div>
-  </div> <!-- /.container -->
+      <!-- end of arrow box -->
+   </div> <!-- end of headBox-->
+  </div> <!-- /.containerbox -->
 </header><!--/.header-->
 
 
