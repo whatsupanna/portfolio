@@ -5,8 +5,30 @@
 */
 
 get_header();  ?>
+<?php if (is_front_page()) {?>
+	<div class="container demo-3">
+	  <div class="content">
+	            <div id="large-header" class="large-header">
+	                <canvas id="demo-canvas"></canvas>
+	                <h1 class="main-title">What's Up Anna?</span></h1>
+	            </div>
+	  </div>
+  <?php } ?>
 
 <div class="main">
+	<!-- <div class="downArrow"> -->
+		<svg class="downArrow" width="50px" height="50px" viewBox="0 0 110 52" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+		    
+		    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+		      
+		        <path d="M9.5,10.5 L53.5,41.5" id="line1" stroke="#000000" stroke-width="3" stroke-linecap="square" sketch:type="MSShapeGroup"></path>
+		  <g class= "line1">  
+		        <path d="M54.5,10.5 L98.5,41.5" id="line2" stroke="#000000" stroke-width="3" stroke-linecap="square" sketch:type="MSShapeGroup" transform="translate(76.500000, 26.000000) scale(1, -1) translate(-76.500000, -26.000000) "></path>
+		    </g>    
+		    </g>
+		</svg>
+<!-- 	</div> -->
+
 	<div class="wrapper">
 	  <div class="container clearfix">
 
@@ -29,10 +51,11 @@ get_header();  ?>
 					
 				</div>
 
+
 				<div class="bioContent bioContentImage">
 					<?php if( get_field('picture') ): ?>
-
-					<img src="<?php the_field('picture'); ?>" />
+					<?php $image = get_field('picture'); ?>
+					<img src="<?php echo $image['sizes']['medium']; ?>" />
 
 					<?php endif; ?>
 				</div>

@@ -19,7 +19,7 @@
 
 <header>
   <div class="container clearfix">
-    <div class="headerBox clearfix">
+    <div class="headerBox clearfix animate">
       <div class="logoBox">
         <h3>
           <a href="<?php echo home_url( '/' ); ?>" title="<?php bloginfo( 'name', 'display' ); ?>" rel="home">
@@ -52,7 +52,11 @@
       </nav>
       </div> 
    </div>
-    
   </div> <!-- /.container -->
 </header><!--/.header-->
+
+
+  
+
+
 

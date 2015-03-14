@@ -61,15 +61,39 @@ function hackeryou_scripts() {
     false, //dependencies
     null, // version number
     true //load in footer
+  ); 
+
+  wp_enqueue_script(
+    'header', //handle
+    get_template_directory_uri() . '/js/header.js', //source
+    array('jquery'), // dependencies
+    null, // version number
+    true //load in footer
   );
 
-  // wp_enqueue_script(
-  //   'progressScroll', //handle
-  //   get_template_directory_uri() . '/js/jquery.progressScroll.js', //source
-  //   array('jquery'), //dependencies
-  //   null, // version number
-  //   true //load in footer
-  // );
+  wp_enqueue_script(
+    'rAF', //handle
+    get_template_directory_uri() . '/js/rAF.js', //source
+    array('jquery'), // dependencies
+    null, // version number
+    true //load in footer
+  );
+
+  wp_enqueue_script(
+    'TweenLite', //handle
+    get_template_directory_uri() . '/js/TweenLite.min.js', //source
+    array('jquery'), // dependencies
+    null, // version number
+    true //load in footer
+  );
+
+  wp_enqueue_script(
+    'EasePack', //handle
+    get_template_directory_uri() . '/js/EasePack.min.js', //source
+    array('jquery'), // dependencies
+    null, // version number
+    true //load in footer
+  );
 
   wp_enqueue_script(
     'scripts', //handle

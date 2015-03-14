@@ -262,8 +262,8 @@ ul.menu {
   width: auto;
   top: 100%;
   left: 0;
-  text-transform: lowercase;
-  background: #f2f2f2; }
+  background: #f2f2f2;
+  text-transform: lowercase; }
   .nav a {
     color: black; }
   .nav a:hover {
@@ -275,11 +275,12 @@ ul.menu {
 .headerBox {
   width: 100%;
   position: fixed;
-  background: #f2f2f2;
+  background: white;
   top: 0;
   left: 0;
   padding: 20px;
   font-size: 0;
+  text-transform: lowercase;
   z-index: 9999999999999999999999999999999999999; }
 
 .logoBox {
@@ -287,16 +288,15 @@ ul.menu {
   font-size: 15px;
   width: 15%;
   margin: 0;
+  text-transform: lowercase;
   vertical-align: middle; }
   .logoBox a {
-    color: black;
-    text-transform: lowercase; }
+    color: black; }
 
 .menu {
   text-transform: lowercase;
   color: #4B4B4B;
   display: inline-block;
-  padding-top: 5px;
   font-size: 16px; }
 
 div.arrow {
@@ -310,9 +310,6 @@ div.arrow {
   @media (max-width: 500px) {
     div.arrow {
       text-align: right; } }
-
-.arrow.arrowIcon {
-  fill: black; }
 
 /* =============================================================================
                    Comment Styling
@@ -545,12 +542,12 @@ p.form-allowed-tags, .nocomments {
   padding: 50px;
   opacity: 0;
   transition: all 0.2s;
-  transform: translateY(10%); }
+  transform: translateY(20%); }
   .featuredPost .pieceTitle {
     font-size: 50px;
     font-weight: 200;
     font-family: 'Muli', sans-serif;
-    color: black; }
+    color: rgba(0, 0, 0, 0.8); }
   .featuredPost .tools {
     font-size: 15px;
     text-transform: uppercase;
@@ -583,10 +580,6 @@ p.form-allowed-tags, .nocomments {
   opacity: 1;
   transform: translateX(0); }
 
-.box {
-  opacity: 0;
-  transform: translateX(-100%); }
-
 /* =============================================================================
                    News
    ========================================================================== */
@@ -617,31 +610,30 @@ section {
                    About Me Home Page Styles
    ========================================================================== */
 .bio {
-  padding: 30px 30px;
-  padding-top: 80px;
+  padding: 200px 30px;
   margin: 0 auto;
   width: 80%; }
 
 .bioContent {
   float: left;
-  padding-bottom: 30px; }
+  padding-bottom: 20px; }
   .bioContent.bioContentAbout {
     width: 60%;
-    margin-top: 2%; }
+    margin-top: 10%; }
     .bioContent.bioContentAbout p {
-      color: black;
-      font-size: 30px;
-      padding: 0 15px; }
+      color: rgba(0, 0, 0, 0.5);
+      font-size: 25px;
+      padding: 0 25px;
+      font-weight: 300;
+      line-height: 1.5; }
   .bioContent.bioContentImage {
     margin-top: 5%;
     width: 40%; }
 
 .aboutLink {
   color: black;
-  padding: 10px 15px;
-  border: 2px solid black;
-  transition: all 0.2s;
-  margin-left: 2%; }
+  padding: 10px 25px;
+  transition: all 0.2s; }
   .aboutLink:hover {
     color: #ccc;
     border: 2px solid #ccc; }
@@ -682,7 +674,43 @@ section {
 /* =============================================================================
                    About Me Page Styles
    ========================================================================== */
-.wrapper {
+.aboutWrapper {
   width: 80%;
-  padding-top: 50px; }
+  padding-top: 50px;
+  margin: 0 auto; }
 
+.aboutpagePicture {
+  max-width: 50%;
+  margin: 0 auto; }
+
+.aboutpageHeading {
+  text-transform: lowercase;
+  font-weight: 300;
+  font-size: 50px; }
+
+.aboutpageText {
+  padding: 15px 20px;
+  letter-spacing: 0.1rem; }
+
+.aboutpageTitle {
+  font-weight: 200;
+  padding: 15px 20px;
+  font-size: 28px; }
+
+/* =============================================================================
+                   Header Animation Styles
+   ========================================================================== */
+.main-title {
+  position: absolute;
+  font-size: 50px;
+  font-weight: 200;
+  text-shadow: inset 0 0 15px white;
+  margin: 0;
+  padding: 0;
+  color: #666;
+  padding: 10px 15px;
+  text-align: center;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate3d(-50%, -50%, 0);
+  transform: translate3d(-50%, -50%, 0); }
