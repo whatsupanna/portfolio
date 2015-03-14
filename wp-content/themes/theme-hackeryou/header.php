@@ -63,7 +63,7 @@
             'menu' => 'main'
           )); ?>
         </nav>
-        <span id="bazinga">Bazinga!</span>
+        <span id="bazinga"></span>
       </div> 
       <!-- end of arrow box -->
    </div> <!-- end of headBox-->

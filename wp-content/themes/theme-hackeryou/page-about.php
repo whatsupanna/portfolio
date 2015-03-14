@@ -8,7 +8,7 @@ get_header();  ?>
 
 <div class="aboutWrapper clearfix">
 	<div class="aboutSection clearfix">
-		<h2 class="aboutpageHeading">About Me</h2>
+		<h2 class="aboutpageHeading">About Anna</h2>
 		
 		<div class="aboutpageImage">
 			<?php if( get_field('aboutpage_picture') ): ?>
@@ -45,6 +45,7 @@ get_header();  ?>
 				<li>Sass</li>
 				<li>Responsive</li>
 				<li>APis</li>
+				<li>Pair Programming</li>
 			</ul>
 		</div>
 		<div class="toolsBox block">
@@ -54,6 +55,7 @@ get_header();  ?>
 				<li>Github</li>
 				<li>Gulp</li>
 				<li>Sublime Text</li>
+				<li>Chrome Dev Tools</li>
 			</ul>
 		</div>
 		<div class="socialBox block">
