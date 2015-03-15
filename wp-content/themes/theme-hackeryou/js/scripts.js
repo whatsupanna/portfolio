@@ -31,6 +31,20 @@ $(function(){
     	});
     });
 
-  });
+    $(window).on('scroll',function() {
+
+      $('.headerBox').each(function() {
+        // cache the current box
+        var $el = $(this);
+        if(isScrolledIntoView($el)) {
+          $el.addClass('sticky');
+        }
+
+      });
+    });
+
+
+
+});
 
 

@@ -48,7 +48,7 @@ get_header();  ?>
 
 		
 
-		<div class="blog clearfix">
+		<div class="blogBar clearfix">
 			<h2 class="newsHeading">Latest News</h2>
 			<div class="news">
 			<?php

@@ -13,7 +13,6 @@ get_header();  ?>
 		<div class="aboutpageImage">
 			<?php if( get_field('aboutpage_picture') ): ?>
 			<?php $image = get_field('aboutpage_picture'); ?>
-
 			<div class="aboutpagePicture">
 				<img src="<?php echo $image['sizes']['large']; ?>" />
 			</div>
@@ -34,39 +33,51 @@ get_header();  ?>
 		<!-- end of aboutpage content -->
 	</div>
 	<!-- about Section -->
-	<div class="skillsContent">
+	<div class="skillsContent clearfix">
 		<div class="skillsBox block">
 			<h2 class="listHeader">I'm Great With:</h2>
-			<ul class="skillsList list">
-				<li>JavaScript</li>
-				<li>jQuery</li>
-				<li>HTML5</li>
-				<li>CSS3</li>
-				<li>Sass</li>
-				<li>Jade</li>
-				<li>Responsive Design</li>
-				<li>APis</li>
-				<li>Pair Programming</li>
+			<ul class="skillsList list clearfix">
+				<li class="keyWords">JavaScript</li>
+				<li class="keyWords">jQuery</li>
+				<li class="keyWords">HTML5</li>
+				<li class="keyWords">CSS3</li>
+				<li class="keyWords">Sass</li>
+				<li class="keyWords">Jade</li>
+				<li class="keyWords">Responsive Design</li>
+				<li class="keyWords">APis</li>
+				<li class="keyWords">Pair Programming</li>
 			</ul>
 		</div>
 		<div class="toolsBox block">
 			<h2 class="listHeader" >My Tools:</h2>
-			<ul class="toolsList list">
-				<li>Git</li>
-				<li>Github</li>
-				<li>Gulp</li>
-				<li>Sublime Text</li>
-				<li>Chrome Dev Tools</li>
-			</ul>
+			<ul class="toolsList list clearfix">
+				<li class="keyWords">Git</li>
+				<li class="keyWords">Github</li>
+				<li class="keyWords">Gulp</li>
+				<li class="keyWords">Sublime Text</li>
+				<li class="keyWords">Chrome Dev Tools</li>
+			</ul> 
+		</div>
+			<div class="readingBox block">
+			<h2 class="listHeader" >I'm Super Interested In:</h2>
+			<ul class="readingList list clearfix">
+				<li class="keyWords">JavaScript!!!</li>
+				<li class="keyWords">Backbone.js</li>
+				<li class="keyWords">Angular.js</li>
+				<li class="keyWords">CoffeeScript</li>
+				<li class="keyWords">Node.js</li>
+				<li class="keyWords">WebGL</li>
+			
+			</ul> 
 		</div>
 		<div class="socialBox block">
-			<h2 class="listHeader" >Follow Me:</h2>
-			<ul class="socialList list">
-				<li><i class="fa fa-github"></i></li>
-				<li><i class="fa fa-twitter"></i></li>
-				<li><i class="fa fa-linkedin"></i></li>
-				<li><i class="fa fa-facebook"></i></li>
-				<li><i class="fa fa-instagram"></i></li>
+			<h2 class="listHeader" >Connect With Me:</h2>
+			<ul class="socialList list clearfix">
+				<a href="#"><li class="keyWords socialWords">Facebook</li></a>
+				<a href="#"><li class="keyWords socialWords">Twitter</li></a>
+				<a href="#"><li class="keyWords socialWords">LinkedIn</li></a>
+				<a href="https://github.com/whatsupanna"><li class="keyWords socialWords">GitHub</li></a>	
+				<a href="#"><li class="keyWords socialWords">Resume PDF</li></a>
 			</ul>
 		</div>
 	</div>

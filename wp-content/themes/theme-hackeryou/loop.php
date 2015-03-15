@@ -17,19 +17,37 @@
 <?php while ( have_posts() ) : the_post(); ?>
 
 		<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-			<h2 class="entry-title">
-        
-          <?php the_title(); ?>
-        </a>
-      	</h2>
+		<div class="loopWrapper clearfix">
+			<div class="loopBox">
+				<div class="sideBar">
+				      <h3 class="singleDate">March 15th 2015</h3>
+				      <ul class="singleList">
+				        <li class="singleListItems">Sass</li>
+				        <li class="singleListItems">jQuery</li>
+				        <li class="singleListItems">Animations</li>
+				        <li class="singleListItems">JavaScript</li>
+				      </ul>
+				    </div>
+				<div class="pageContent">
+					<h2 class="entry-title">
+			        <a href="<?php get_permalink(); ?>"><?php the_title(); ?></a>
+			      	</h2>
 
-      	 <section class="entry-content">
-      					 <?php the_excerpt(); ?>
-      					<?php wp_link_pages( array(
-      	          'before' => '<div class="page-link"> Pages:',
-      	          'after' => '</div>'
-      	        )); ?>
-      	</section><!-- .entry-content -->
+			      	 <section class="entry-content indexContent">
+			      	 <p>
+			      					 <?php the_excerpt(); ?>
+			      					<?php wp_link_pages( array(
+			      	          'before' => '<div class="page-link"> Pages:',
+			      	          'after' => '</div>'
+			      	        )); ?>
+			      	 </p>
+			      	</section><!-- .entry-content -->
+			    </div>
+	      	<!-- end of page content -->
+	      	</div> 
+	      	<!-- end of loopBox -->
+      	</div> 
+      	<!-- end of loop wrapper -->
 
 			
 
@@ -47,6 +65,6 @@
 
 <?php // Display navigation to next/previous pages when applicable ?>
 <?php if (  $wp_query->max_num_pages > 1 ) : ?>
-  <p class="alignleft"><?php next_posts_link('&laquo; Older Entries'); ?></p>
-  <p class="alignright"><?php previous_posts_link('Newer Entries &raquo;'); ?></p>
+  <p class="directionArrowLeft"><?php next_posts_link('&laquo; Older Entries'); ?></p>
+  <p class="adirectionArrowRight"><?php previous_posts_link('Newer Entries &raquo;'); ?></p>
 <?php endif; ?>

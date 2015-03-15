@@ -1,7 +1,7 @@
 <?php get_header(); ?>
 
-<div class="singleMain">
-  <div class="container">
+<div class="singleMain clearfix">
+  <div class="container clearfix">
     <div class="sideBar">
       <h3 class="singleDate">March 15th 2015</h3>
       <ul class="singleList">
@@ -30,13 +30,18 @@
               'after' => '</div>'
             )); ?>
           </div><!-- .entry-content -->
+          <div id="nav-below" class="navigation">
+            <div class="directionArrowLeft">
+              <p class="nav-previous"><?php previous_post_link('%link', '&larr; %title'); ?></p>
+            </div>
 
+            <div class="directionArrowRight">  
+              <p class="nav-next"><?php next_post_link('%link', '%title &rarr;'); ?></p>
+            </div>
+          </div><!-- #nav-below -->
         </div><!-- #post-## -->
 
-        <div id="nav-below" class="navigation">
-          <p class="nav-previous"><?php previous_post_link('%link', '&larr; %title'); ?></p>
-          <p class="nav-next"><?php next_post_link('%link', '%title &rarr;'); ?></p>
-        </div><!-- #nav-below -->
+    
 
 
       <?php endwhile; // end of the loop. ?>

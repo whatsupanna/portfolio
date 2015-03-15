@@ -320,6 +320,17 @@ div.arrow {
     outline: none; }
 
 /* =============================================================================
+                 Sticky Nav Style
+   ========================================================================== */
+.sticky {
+  position: fixed;
+  width: 100%;
+  left: 0;
+  top: 0;
+  z-index: 100;
+  border-top: 0; }
+
+/* =============================================================================
                    Comment Styling
    ========================================================================== */
 #comments .navigation {
@@ -663,9 +674,9 @@ section {
     color: #ccc; }
 
 /* =============================================================================
-                   BLog Styles
+                   Blog Styles
    ========================================================================== */
-.blog {
+.blogBar {
   width: 80%;
   margin: 0 auto;
   padding-top: 50px; }
@@ -708,7 +719,7 @@ section {
 
 .aboutSection {
   padding-top: 30px;
-  padding-bottom: 150px; }
+  padding-bottom: 100px; }
 
 .aboutpagePicture {
   max-width: 48%;
@@ -725,7 +736,8 @@ section {
   text-transform: lowercase;
   font-weight: 500;
   font-size: 45px;
-  margin-left: 2%; }
+  margin-left: 2%;
+  display: inline-block; }
 
 .aboutpageText {
   padding: 15px 20px;
@@ -734,31 +746,49 @@ section {
 .aboutpageTitle {
   font-weight: 200;
   font-size: 30px;
-  text-transform: lowercase; }
+  text-transform: lowercase;
+  display: inline-block; }
 
 .skillsContent {
   padding: 0;
   width: 100%;
   margin: 0 auto;
   color: rgab(0, 0, 0, 0.8);
-  padding-bottom: 400px; }
+  padding-bottom: 200px; }
   .skillsContent .listHeader {
-    font-weight: 300;
-    margin-left: 4%; }
+    font-weight: 700;
+    margin-left: 2.5%;
+    font-size: 12px;
+    text-transform: uppercase; }
   .skillsContent .block {
-    width: 30%;
-    min-height: 250px;
+    width: 90%;
     padding: 10px 15px;
-    margin: 0 1.5%;
-    background: #FBFBFB;
-    float: left; }
+    margin: 4%;
+    background: #FBFBFB; }
     .skillsContent .block .list {
       padding: 0;
       margin: 0;
       list-style: none;
       color: rgab(0, 0, 0, 0.8);
       padding: 10px 15px;
-      box-shadow: 0 0 20px white; }
+      box-shadow: 0 0 20px white;
+      clear: both; }
+      .skillsContent .block .list .keyWords {
+        float: left;
+        border: 1px solid rgba(0, 0, 0, 0.8);
+        padding: 10px 15px;
+        margin: 1%;
+        color: rgba(0, 0, 0, 0.8);
+        font-size: 14px; }
+      .skillsContent .block .list .socialWords {
+        background: #ccc;
+        border: none;
+        text-transform: uppercase;
+        font-size: 10px;
+        font-weight: 900; }
+        .skillsContent .block .list .socialWords .socialWords:hover {
+          color: #ccc;
+          background: rgba(0, 0, 0, 0.8); }
 
 /* =============================================================================
                    Header Animation Styles
@@ -891,18 +921,25 @@ section {
     font-size: 25px;
     padding-bottom: 10px;
     border-bottom: 5px solid #626262; }
+    .pageContent .entry-title a {
+      text-decoration: none;
+      color: rgba(0, 0, 0, 0.8); }
+
+.entry-content {
+  padding-bottom: 200px; }
 
 .sideBar {
   width: 15%;
   float: left;
   margin-right: 3%;
   padding: 10px 15px;
+  padding-bottom: 30px;
   border-bottom: 5px solid #626262;
   text-align: left;
   padding-left: 0; }
   .sideBar .singleDate {
-    font-size: 15px;
-    font-weight: 300;
+    font-size: 13px;
+    font-weight: 400;
     padding-bottom: 15px; }
   .sideBar .singleList {
     list-style: none;
@@ -910,5 +947,34 @@ section {
     padding: 0; }
     .sideBar .singleList .singleListItems {
       font-size: 13px;
-      font-weight: 600;
+      font-weight: 900;
       line-height: 1.5rem; }
+
+.navigation {
+  clear: both;
+  padding-bottom: 100px; }
+
+.directionArrowLeft, .directionArrowRight {
+  background: #ccc;
+  display: inline-block;
+  padding: 5px 10px; }
+  .directionArrowLeft a, .directionArrowRight a {
+    color: rgba(0, 0, 0, 0.8);
+    text-decoration: none; }
+
+.directionArrowRight {
+  float: right; }
+
+/* =============================================================================
+                  Loop/ Index Page Style
+   ========================================================================== */
+.loopWrapper {
+  width: 90%;
+  margin: 0 auto; }
+
+.loopBox {
+  margin-top: 10%; }
+
+.indexContent {
+  padding: 0;
+  padding-bottom: 100px; }
