@@ -167,7 +167,8 @@ img.alignright {
    ========================================================================== */
 body {
   color: #333;
-  font-family: 'Lato', sans-serif; }
+  font-family: 'Lato', sans-serif;
+  text-rendering: optimizeLegibility; }
 
 h3 {
   padding: 0;
@@ -234,10 +235,14 @@ footer {
   clear: both; }
 
 .contactFoot {
-  color: grey; }
+  color: #ccc; }
 
 .contactFoot:hover {
   color: black; }
+
+.designLink {
+  text-decoration: none;
+  color: #ccc; }
 
 /* =============================================================================
                    Navigation
@@ -284,7 +289,7 @@ ul.menu {
   text-transform: lowercase;
   vertical-align: middle; }
   .logoBox a {
-    color: rgba(0, 0, 0, 0.9); }
+    color: rgba(0, 0, 0, 0.8); }
 
 .menu {
   text-transform: lowercase;
@@ -513,7 +518,7 @@ p.form-allowed-tags, .nocomments {
   .footerNav a {
     color: #ccc; }
   .footerNav a:hover {
-    color: black; }
+    color: rgba(0, 0, 0, 0.8); }
 
 /* =============================================================================
                    Portfolio Item Styles
@@ -573,7 +578,7 @@ p.form-allowed-tags, .nocomments {
   .featuredPost a {
     padding: 5px 10px;
     display: inline-block;
-    color: black;
+    color: rgba(0, 0, 0, 0.8);
     -webkit-transition: all 0.2s ease;
             transition: all 0.2s ease; }
   .featuredPost a:hover {
@@ -607,7 +612,7 @@ div.news {
   font-size: 0;
   font-size: 16px;
   vertical-align: top;
-  border-right: 2px solid black;
+  border-right: 2px solid rgba(0, 0, 0, 0.8);
   display: block; }
   div.news .newsPost {
     padding: 20px;
@@ -666,23 +671,23 @@ section {
   padding-top: 50px; }
 
 .blogsectionTitle {
-  color: black;
+  color: rgba(0, 0, 0, 0.8);
   margin: 0 auto;
   margin-bottom: 15px; }
   .blogsectionTitle a {
     text-align: center;
-    color: black;
+    color: rgba(0, 0, 0, 0.8);
     font-weight: 400;
     font-size: 20px; }
     .blogsectionTitle a:hover {
-      color: grey; }
+      color: rgba(0, 0, 0, 0.8); }
 
 .blogExcerpt {
   margin: 10%;
   color: white; }
 
 .readMore {
-  color: black;
+  color: rgba(0, 0, 0, 0.8);
   font-style: italic; }
 
 .blogPic {
@@ -702,7 +707,8 @@ section {
   margin: 0 auto; }
 
 .aboutSection {
-  padding-bottom: 100px; }
+  padding-top: 30px;
+  padding-bottom: 150px; }
 
 .aboutpagePicture {
   max-width: 48%;
@@ -719,7 +725,7 @@ section {
   text-transform: lowercase;
   font-weight: 500;
   font-size: 45px;
-  margin-left: 1%; }
+  margin-left: 2%; }
 
 .aboutpageText {
   padding: 15px 20px;
@@ -734,9 +740,11 @@ section {
   padding: 0;
   width: 100%;
   margin: 0 auto;
-  color: rgab(0, 0, 0, 0.8); }
+  color: rgab(0, 0, 0, 0.8);
+  padding-bottom: 400px; }
   .skillsContent .listHeader {
-    font-weight: 300; }
+    font-weight: 300;
+    margin-left: 4%; }
   .skillsContent .block {
     width: 30%;
     min-height: 250px;
@@ -854,3 +862,53 @@ section {
 
 .entry-content {
   background: #f2f2f2; }
+
+/* =============================================================================
+                   Single Blog Page Style
+   ========================================================================== */
+.singleMain {
+  width: 90%;
+  margin: 0 auto;
+  padding-top: 100px; }
+
+.entry-content {
+  background: white;
+  padding-top: 5px; }
+  .entry-content p {
+    line-height: 1.7rem;
+    font-size: 16px;
+    margin-top: 3%; }
+
+.pageContent {
+  width: 75%;
+  float: left;
+  margin: 0 3%; }
+  .pageContent .entry-title {
+    margin: 0;
+    padding: 0;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 25px;
+    padding-bottom: 10px;
+    border-bottom: 5px solid #626262; }
+
+.sideBar {
+  width: 15%;
+  float: left;
+  margin-right: 3%;
+  padding: 10px 15px;
+  border-bottom: 5px solid #626262;
+  text-align: left;
+  padding-left: 0; }
+  .sideBar .singleDate {
+    font-size: 15px;
+    font-weight: 300;
+    padding-bottom: 15px; }
+  .sideBar .singleList {
+    list-style: none;
+    margin: 0;
+    padding: 0; }
+    .sideBar .singleList .singleListItems {
+      font-size: 13px;
+      font-weight: 600;
+      line-height: 1.5rem; }

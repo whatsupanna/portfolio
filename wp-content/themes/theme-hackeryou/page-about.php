@@ -43,7 +43,8 @@ get_header();  ?>
 				<li>HTML5</li>
 				<li>CSS3</li>
 				<li>Sass</li>
-				<li>Responsive</li>
+				<li>Jade</li>
+				<li>Responsive Design</li>
 				<li>APis</li>
 				<li>Pair Programming</li>
 			</ul>
@@ -64,6 +65,8 @@ get_header();  ?>
 				<li><i class="fa fa-github"></i></li>
 				<li><i class="fa fa-twitter"></i></li>
 				<li><i class="fa fa-linkedin"></i></li>
+				<li><i class="fa fa-facebook"></i></li>
+				<li><i class="fa fa-instagram"></i></li>
 			</ul>
 		</div>
 	</div>

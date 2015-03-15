@@ -43,9 +43,11 @@ img.alignright    { padding-left: 5px; }
    ========================================================================== */
 
 $grey : #ccc;
+$black : rgba(0,0,0,0.8);
 body {
   color:#333;
   font-family: 'Lato', sans-serif;
+  text-rendering: optimizeLegibility;
 }
 h3{
   padding:0;
@@ -123,10 +125,14 @@ footer {
   clear:both;
 }
 .contactFoot{
-  color:grey;
+  color:$grey;
 }
 .contactFoot:hover{
   color:black;
+}
+.designLink{
+  text-decoration: none;
+  color:$grey;
 }
 
 
@@ -183,7 +189,7 @@ footer {
       text-transform: lowercase;
       vertical-align: middle;
            a{
-         color:rgba(0,0,0,0.9);
+         color:$black;
       }
   }
   .menu{
@@ -384,7 +390,7 @@ p.form-allowed-tags, .nocomments { display:none; }
     color:#ccc;
   }
   a:hover{
-    color:black;
+    color:$black;
   }
 }
 
@@ -428,7 +434,7 @@ p.form-allowed-tags, .nocomments { display:none; }
       font-size: 50px;
       font-weight: 200;
       font-family: 'Muli', sans-serif;
-      color:rgba(0,0,0,0.8);
+      color:$black;
     }
     .tools{
       font-size: 15px;
@@ -442,7 +448,7 @@ p.form-allowed-tags, .nocomments { display:none; }
     a{
       padding:5px 10px;
       display: inline-block;
-      color:black;
+      color:$black;
       transition:all 0.2s ease;
     }
     a:hover{
@@ -482,7 +488,7 @@ p.form-allowed-tags, .nocomments { display:none; }
    font-size: 0;
    font-size: 16px;
    vertical-align: top;
-   border-right: 2px solid black;
+   border-right: 2px solid $black;
   
    display: block;
       .newsPost{
@@ -557,16 +563,16 @@ p.form-allowed-tags, .nocomments { display:none; }
 
 }
 .blogsectionTitle{
-  color:black;
+  color:$black;
   margin:0 auto;
   margin-bottom: 15px;
   a{
     text-align: center;
-    color:black;
+    color:$black;
     font-weight: 400;
     font-size: 20px;
     &:hover{
-      color:grey;
+      color:$black;
     }
   }
 }
@@ -576,7 +582,7 @@ p.form-allowed-tags, .nocomments { display:none; }
 
 }
 .readMore{
-  color:black;
+  color:$black;
   font-style: italic;
 
 }
@@ -598,7 +604,8 @@ p.form-allowed-tags, .nocomments { display:none; }
   margin:0 auto;
 }
 .aboutSection{
-  padding-bottom: 100px;
+  padding-top: 30px;
+  padding-bottom: 150px;
 }
 
 .aboutpageImage{
@@ -619,7 +626,7 @@ p.form-allowed-tags, .nocomments { display:none; }
   text-transform: lowercase;
   font-weight: 500;
   font-size: 45px;
-  margin-left: 1%;
+  margin-left: 2%;
 }
 .aboutpageText{
   padding:15px 20px;
@@ -636,8 +643,10 @@ p.form-allowed-tags, .nocomments { display:none; }
   width:100%;
   margin:0 auto;
   color:rgab(0,0,0,0.8);
+  padding-bottom: 400px;
   .listHeader{
     font-weight: 300;
+    margin-left: 4%;
   }
   .block{
     width: 30%;
@@ -650,7 +659,7 @@ p.form-allowed-tags, .nocomments { display:none; }
       padding:0;
       margin:0;
       list-style:none;
-     
+    
       color:rgab(0,0,0,0.8);
       padding:10px 15px;
       box-shadow: 0 0 20px white;
@@ -807,4 +816,63 @@ p.form-allowed-tags, .nocomments { display:none; }
 }
 .entry-content{
   background: #f2f2f2;
+}
+
+
+/* =============================================================================
+                   Single Blog Page Style
+   ========================================================================== */
+.singleMain{
+  width:90%;
+  margin:0 auto;
+  padding-top: 100px;
+}
+.entry-content{
+  background: white;
+  padding-top: 5px;
+  p{
+  line-height: 1.7rem;
+  font-size: 16px;  
+  margin-top: 3%; 
+  }
+
+}
+.pageContent{
+  width:75%;
+  float:left;
+  margin:0 3%;
+
+  .entry-title{
+    margin:0;
+    padding:0;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 25px;
+    padding-bottom: 10px;
+    border-bottom: 5px solid #626262;
+  }
+}
+.sideBar{
+  width:15%;
+  float:left;
+  margin-right: 3%;
+  padding:10px 15px;
+  border-bottom: 5px solid #626262;
+  text-align: left;
+  padding-left:0;
+  .singleDate{
+    font-size: 15px;
+    font-weight: 300;
+    padding-bottom: 15px;
+  }
+  .singleList{
+    list-style:none;
+    margin:0;
+    padding:0;
+    .singleListItems{
+      font-size: 13px;
+      font-weight: 600;
+      line-height: 1.5rem;
+    }
+  }
 }

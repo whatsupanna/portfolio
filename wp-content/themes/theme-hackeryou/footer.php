@@ -14,6 +14,7 @@
 	  		</a>
 	  	</ul>
 	    <p><span class="contactFoot">Email me</span> | whatsup@whatsupanna.com |<span class="contactFoot"> Call me</span> | 416-806-3158</p>
+	    <p>Design inspired by <a class="designLink" href="http://pcurio.com/">http://perpetuatingcuriosity.com/</a> </p>
 	    <p>&copy; Whats Up Anna <?php echo date('Y'); ?></p>
     </div>
   </div>
