@@ -2,6 +2,7 @@
 <html <?php language_attributes(); ?>>
 <head>
 	<?php // Load Meta ?>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta charset="<?php bloginfo( 'charset' ); ?>" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title><?php  wp_title('|', true, 'right'); ?></title>
@@ -27,7 +28,7 @@
     </div>
 
     <div class="headArrow">
-      <a class="arrowLink" data-scroll href="#bazinga"><i class="fa fa-arrow-down animated bounce infinite"></i></a>
+      <a class="arrowLink" data-scroll href="#bazinga"><i class="fa fa-arrow-down animated bounce"></i></a>
     </div>
   <?php } ?>
 <header>
@@ -63,7 +64,7 @@
             'menu' => 'main'
           )); ?>
         </nav>
-        <span id="bazinga"></span>
+
       </div> 
       <!-- end of arrow box -->
    </div> <!-- end of headBox-->

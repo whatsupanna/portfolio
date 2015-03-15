@@ -1,0 +1,103 @@
+// Media Queries
+@media (max-width: 1224px){
+	
+	.aboutPageContent{
+		width:80%;
+		// padding:0 50px;
+		float:none;
+		margin:0 auto;
+	}
+	.aboutpageImage{
+		width:100%;
+		margin:0 auto;
+		float:none;
+		// margin-left: 10%;
+	}
+	.aboutpagePicture{
+		max-width:80%;
+		margin:0 auto;
+		float:none;
+	}
+
+}
+@media (max-width: 989px){
+	.bioContent.bioContentAbout{
+		width:100%;
+		margin:0 auto;
+		padding:0 10px;
+	}
+	.bioContent.bioContentImage{
+		display: inline-block;
+		width:100%;
+		text-align: center;
+	}
+	.bio{
+		padding:0;
+	}	
+}
+
+
+@media (max-width: 950px){
+	.portfolio{	
+		-webkit-flex-direction: column;
+		 flex-direction: column;
+		 width:100%;
+	}
+	.portfolioBox{
+		-webkit-flex-direction: column;
+		 flex-direction: column;
+		 width:100%;
+		 height:auto;
+	}
+	.featuredPost{
+		width:80%;
+	}
+	.imageHolder{
+		width:80%;
+	}
+	.pageContent{
+		margin-top: 5%;
+	}
+
+	
+}
+@media (max-width: 850px){
+	.aboutSection{
+		padding-bottom: 50px;
+	}
+	.skillsContent{
+		padding-bottom: 80px;
+	}
+}
+@media(max-width: 605px){
+	.directionArrowRight, .directionArrowLeft{
+		display: block;
+		width:100%;
+		margin-top: 5%;
+	}
+	.entry-content{
+		padding-bottom:50px;
+	}
+	// footer{
+	// 	padding-top: 100px;
+	// }
+}
+
+@media(max-width: 600px){
+	.pageContent{
+		margin-top: 10%;
+	}
+	.sideBar{
+		margin-top: 10%;
+	}
+	.singleListItems{
+		padding-bottom: 20px;
+	}
+}
+
+
+@media (max-width: 500px){
+  .nav{
+  	right:0;
+  }
+}

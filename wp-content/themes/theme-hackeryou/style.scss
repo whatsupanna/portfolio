@@ -158,6 +158,7 @@ footer {
     position: absolute;
     background: white ;
     text-transform: lowercase;
+
       a{
         color:black;
       }
@@ -175,7 +176,6 @@ footer {
     width:100%;
     background: white;
     padding:25px;
-    // padding-bottom: 60px;
     font-size: 0;
     text-transform: lowercase;
     z-index: 9999999999999999999999999999999999999;
@@ -222,8 +222,6 @@ footer {
       color:rgba(0,0,0,0.7);
       outline: none;
     }
-    // transform:translateX(-50%);
-    // transform:translateY(50%);
   }
 
 /* =============================================================================
@@ -235,15 +233,9 @@ footer {
     width: 100%;  
     left: 0;  
     top: 0;  
-    z-index: 100;  
+    z-index: 99999999999999999999999999999999999999999999999999999999999999999999999999999999999999999;  
     border-top: 0;  
 }
-
-
-
-
-
-
 
 /* =============================================================================
                    Comment Styling
@@ -402,8 +394,19 @@ p.form-allowed-tags, .nocomments { display:none; }
 .footerNav{
   margin:0;
   padding:0;
-  li{
+  list-style:none;
+  transition:all 0.2s;
+  li:hover{
+    border:1px solid $darkgrey;
+    color:$grey;
+  }
+  .socialFeet{
     display: inline-block;
+    border:1px solid $black;
+    padding: 10px 15px;
+    margin:1%;
+    color:$black;
+    font-size: 14px;
   }
   a{
     color:#ccc;
@@ -430,7 +433,6 @@ p.form-allowed-tags, .nocomments { display:none; }
   align-items: center;
   height: 100vh;
   margin:0 auto;
-  padding:5px;
   position: relative;
   h2{
     margin: 0;
@@ -438,19 +440,18 @@ p.form-allowed-tags, .nocomments { display:none; }
 }
 .images{
   display: inline-block;
-  // padding:50px;
 }
 .featuredPost{
   float:left;
-  width:50%;
-  z-index: 10;
+  width:45%;
   height: auto;
   padding:50px;
+  padding-left:0;
   opacity: 0;
   transition:all 0.2s;
   transform:translateY(20%);
     .pieceTitle{
-      font-size: 50px;
+      font-size: 45px;
       font-weight: 200;
       font-family: 'Muli', sans-serif;
       color:$black;
@@ -474,20 +475,21 @@ p.form-allowed-tags, .nocomments { display:none; }
       color:#6D6E6F;
       border:2px solid #6D6E6F;
     }
-  // background: rgba(255,255,255,0.8);
 }
 .imageHolder{
   float:right;
-  width:50%;
+  width:55%;
   border-radius: 10px;
 }
 .demo{
-  border: 2px solid rgba(0,0,0,0.5);
+  border: 2px solid $darkgrey;
   padding:0;
-  font-size:15px;
+  font-size:12px;
+  font-weight: 400;
+  text-transform: uppercase;
   h3{
     padding:0;
-    color:rgba(0,0,0,0.9);
+    color:$black;
   }
 
 }
@@ -535,9 +537,8 @@ p.form-allowed-tags, .nocomments { display:none; }
    ========================================================================== */
 
 .bio{ // wrapper of content
-
   padding:100px 30px;
-  // padding-top: 80px;
+  padding-top: 80px;
   margin:0 auto;
   width:80%;
 }
@@ -545,10 +546,16 @@ p.form-allowed-tags, .nocomments { display:none; }
 .bioContent {
   float:left;
   padding-bottom: 20px;
+  &.bioContentImage {
+    margin-top:5%;
+    width:45%;
+    float:left;
+  }
 
   &.bioContentAbout {
-    width:60%;
-    margin-top: 10%;
+    width:50%;
+    margin-top: 5%;
+    float:left;
     p {
       color:rgba(0,0,0,0.5);
       font-size: 25px;
@@ -557,12 +564,6 @@ p.form-allowed-tags, .nocomments { display:none; }
       line-height: 1.5;
     }
   } // bioContentAbout
-
-  &.bioContentImage {
-    margin-top:5%;
-    width:40%;
-  } // bioContentImage
-
 } // end bioContent
 .aboutLink{
   color:black;
@@ -623,8 +624,10 @@ p.form-allowed-tags, .nocomments { display:none; }
   margin:0 auto;
 }
 .aboutSection{
-  padding-top: 30px;
+  width:100%;
+  padding-top: 100px;
   padding-bottom: 100px;
+  margin:0 auto;
 }
 
 .aboutpagePicture{
@@ -661,7 +664,7 @@ p.form-allowed-tags, .nocomments { display:none; }
   width:100%;
   margin:0 auto;
   color:rgab(0,0,0,0.8);
-  padding-bottom: 200px;
+  padding-bottom: 150px;
   .listHeader{
     font-weight: 700;
     margin-left: 2.5%;
@@ -681,6 +684,9 @@ p.form-allowed-tags, .nocomments { display:none; }
       padding:10px 15px;
       box-shadow: 0 0 20px white;
       clear:both;
+      li.socialWords:hover{
+        background: #D43A32;
+      }
       .keyWords{
         float:left;
         border:1px solid $black;
@@ -695,10 +701,6 @@ p.form-allowed-tags, .nocomments { display:none; }
         text-transform: uppercase;
         font-size: 10px;
         font-weight:900;
-      .socialWords:hover{
-        color:$grey;
-        background: $black;
-      }
       }
     }
   }
@@ -954,3 +956,8 @@ p.form-allowed-tags, .nocomments { display:none; }
   padding:0;
   padding-bottom: 100px;
 }
+
+
+// Media queries 
+
+@import "mq";

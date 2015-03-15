@@ -6,7 +6,9 @@
 */
 
 get_header();  ?>
+<span id="bazinga"></span>
 <div class="main">
+
 
 	<div class="wrapper">
 	  <div class="containerBox clearfix">
@@ -19,17 +21,8 @@ get_header();  ?>
 	      <?php the_content(); ?>
 
 		<div class="bio clearfix">
-			<div class="contentWrap">
-				<div class="bioContent bioContentAbout"> 
-
-					<?php if (get_field('bio') ):?>
-
-					<p class="bioText"><?php the_field('bio'); ?>
-					<a class="aboutLink" href="<?php echo home_url( '/about' ); ?>">Learn More</a>
-					</p>
-
-					
-				</div>
+			<div class="contentWrap clearfix">
+			
 
 
 				<div class="bioContent bioContentImage">
@@ -39,6 +32,18 @@ get_header();  ?>
 
 					<?php endif; ?>
 				</div>
+
+
+					<div class="bioContent bioContentAbout"> 
+
+					<?php if (get_field('bio') ):?>
+
+					<p class="bioText"><?php the_field('bio'); ?>
+					<a class="aboutLink" href="<?php echo home_url( '/about' ); ?>">Learn More</a>
+					</p>
+
+					
+				</div>
 			</div> <!-- ed .contentWrap -->
 
 		</div>
@@ -46,44 +51,7 @@ get_header();  ?>
 	
 		<?php endif; ?>
 
-		
-
-		<div class="blogBar clearfix">
-			<h2 class="newsHeading">Latest News</h2>
-			<div class="news">
-			<?php
-			$projectQuery = new WP_Query( 
-				array( 
-					'posts_per_page' => 3, 
- 
-					) 
-			); ?>
-
-			<?php if ( $projectQuery->have_posts() ) : ?>
-
-				<?php while ($projectQuery->have_posts()) : $projectQuery->the_post(); ?>
-
-			
-						
-							<div class="newsPost">
-								<h3 class="blogsectionTitle">
-									<a href="<?php the_permalink(); ?>">
-										<?php the_title(); ?>
-									</a>
-								</h3>
-								<div class="blogPic"><?php echo get_the_post_thumbnail( $post->ID, 'large'); ?> </div>
-								<p class="blogExcerpt"><?php the_excerpt(); ?></p>
-								
-							</div>
-						
-				<?php endwhile; ?>
-				
-				<?php wp_reset_postdata(); ?>
-				
-			<?php else:  ?>
-				
-			<?php endif; ?>
-			</div>
+	
 		</div>
 		<section class="portfolio">
 				    <?php // we are going to pull in our latest 4 blogposts ?>
@@ -115,7 +83,7 @@ get_header();  ?>
 					    	<?php 
 					    	$image = get_field('image');
 					    	 ?>
-					    		<a  href="http://<?php the_field('view_demo'); ?>"> <img src="<?php echo $image['url'] ?>"></a>
+					    		<a  href="<?php the_field('view_demo'); ?>"> <img src="<?php echo $image['url'] ?>"></a>
 					    	</div>
 				  		</div>
 				    	<!-- end of portfolio box -->
