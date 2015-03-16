@@ -62,7 +62,16 @@ h2{
 .containerBox {
   margin:0 auto;
   position: relative;
+  top:0;
+  left:0;
+  width:100%;
 }
+// container{
+//   position: relative;
+// }
+// .containerBox.headImage{
+//   position: relative;
+// }
 
 .content {
   width:100%;
@@ -124,10 +133,13 @@ pre {
 
 footer {
   clear:both;
+  background: #f2f2f2;
+  .footerText{
+    padding-top:50px;
+    padding-bottom: 30px;
+  }
 }
-.contactFeet{
-  color:$grey;
-}
+
 .contactFoot{
   color:$black;
   p{ 
@@ -143,7 +155,7 @@ footer {
 }
 .designLink{
   text-decoration: none;
-  color:$grey;
+  color:$black;
 }
 
 
@@ -158,6 +170,7 @@ footer {
   ul.menu {
     margin:0;
     padding:0;
+    display: block;
   }
   .nav{
     list-style-type: none;
@@ -168,6 +181,12 @@ footer {
     position: absolute;
     background: white ;
     text-transform: lowercase;
+    @media (max-width: 950px){
+      text-align: right;
+      right:0;
+      display: block;
+      width:100%;
+    }
 
       a{
         color:black;
@@ -179,6 +198,17 @@ footer {
     li{
       display: block;
       padding: 5px 10px;
+    @media(max-width: 950px){
+      a {
+        padding:40px 10px;
+        display: block;
+        &:hover{
+        color:white;
+          background: #666;
+        }
+        
+      }
+    }
     }
   }
 
@@ -188,21 +218,33 @@ footer {
     padding:25px;
     font-size: 0;
     text-transform: lowercase;
+    position:fixed;
+    top:0;
+  }
 
+  body.home {
+    .headerBox {
+      display: none;
+      &.sticky {
+        display: block;
+      }
+    } 
   }
 
      .logoBox{
       display: inline-block;
       font-size: 15px;
-      width:15%;
-      margin:0;
+      margin:0 3%;
       position: relative;
       text-transform: lowercase;
       vertical-align: middle;
-           a{
-         color:$black;
+      @media(max-width: 950px){
+          float:left;
+        }
+        a{
+           color:$black;
+        }
       }
-  }
   .menu{
     text-transform: lowercase;
     color:#4B4B4B;
@@ -211,15 +253,12 @@ footer {
   }
   div.arrow{
     display: inline-block;
-    width: 85%;
+    width: 80%;
     padding-right:3px;
     cursor: pointer;
     position: relative;
     font-size: 16px;
     vertical-align: top;
-    @media (max-width: 605px){
-      text-align: right;
-    }
   }
 
   .headArrow{
@@ -492,16 +531,24 @@ p.form-allowed-tags, .nocomments { display:none; }
   width:55%;
   border-radius: 10px;
 }
+
 .demo{
   border: 2px solid $darkgrey;
   padding:0;
   font-size:12px;
   font-weight: 400;
+  margin-right: 10px;
   text-transform: uppercase;
   h3{
     padding:0;
     color:$black;
   }
+  &:hover{
+    background: $darkgrey;
+    color:white;
+    border:2px solid $black;
+  }
+
 
 }
 .animate.visible {
@@ -578,6 +625,8 @@ p.form-allowed-tags, .nocomments { display:none; }
 } // end bioContent
 .aboutLink{
   color:$black;
+  border: 1px solid $black;
+  padding:10px 15px;
   transition:all 0.2s;
   &:hover{
     color:$grey;    
@@ -614,6 +663,10 @@ p.form-allowed-tags, .nocomments { display:none; }
 .readMore{
   color:$black;
   font-style: italic;
+  border: 2px solid $black;
+  padding: 10px 15px;
+  display: inline-block;
+  margin-top: 5px;
 
 }
 .blogPic{
@@ -899,7 +952,10 @@ p.form-allowed-tags, .nocomments { display:none; }
   width:75%;
   float:left;
   margin:0 3%;
-
+  a{
+    text-decoration: none;
+    color:$black;
+  }
   .entry-title{
     margin:0;
     padding:0;
@@ -908,10 +964,6 @@ p.form-allowed-tags, .nocomments { display:none; }
     font-size: 25px;
     padding-bottom: 10px;
     border-bottom: 5px solid $darkgrey;
-    a{
-    text-decoration: none;
-    color:$black;
-    }
   }
 }
 .entry-content{

@@ -34,7 +34,7 @@ get_header();  ?>
 				</div>
 
 
-					<div class="bioContent bioContentAbout"> 
+				<div class="bioContent bioContentAbout"> 
 
 					<?php if (get_field('bio') ):?>
 
@@ -83,7 +83,7 @@ get_header();  ?>
 					    	<?php 
 					    	$image = get_field('image');
 					    	 ?>
-					    		<a  href="<?php the_field('view_demo'); ?>"> <img src="<?php echo $image['url'] ?>"></a>
+					    		<a  href="http://<?php the_field('view_demo'); ?>"> <img src="<?php echo $image['url'] ?>"></a>
 					    	</div>
 				  		</div>
 				    	<!-- end of portfolio box -->

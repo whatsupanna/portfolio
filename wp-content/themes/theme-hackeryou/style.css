@@ -180,7 +180,10 @@ h2 {
 
 .containerBox {
   margin: 0 auto;
-  position: relative; }
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%; }
 
 .content {
   width: 100%; }
@@ -232,10 +235,11 @@ pre {
                    Footer
    ========================================================================== */
 footer {
-  clear: both; }
-
-.contactFeet {
-  color: #ccc; }
+  clear: both;
+  background: #f2f2f2; }
+  footer .footerText {
+    padding-top: 50px;
+    padding-bottom: 30px; }
 
 .contactFoot {
   color: rgba(0, 0, 0, 0.8); }
@@ -250,7 +254,7 @@ footer {
 
 .designLink {
   text-decoration: none;
-  color: #ccc; }
+  color: rgba(0, 0, 0, 0.8); }
 
 /* =============================================================================
                    Navigation
@@ -261,7 +265,8 @@ header {
 
 ul.menu {
   margin: 0;
-  padding: 0; }
+  padding: 0;
+  display: block; }
 
 .nav {
   list-style-type: none;
@@ -272,6 +277,12 @@ ul.menu {
   position: absolute;
   background: white;
   text-transform: lowercase; }
+  @media (max-width: 950px) {
+    .nav {
+      text-align: right;
+      right: 0;
+      display: block;
+      width: 100%; } }
   .nav a {
     color: black; }
   .nav a:hover {
@@ -279,22 +290,38 @@ ul.menu {
   .nav li {
     display: block;
     padding: 5px 10px; }
+    @media (max-width: 950px) {
+      .nav li a {
+        padding: 40px 10px;
+        display: block; }
+        .nav li a:hover {
+          color: white;
+          background: #666; } }
 
 .headerBox {
   width: 100%;
   background: white;
   padding: 25px;
   font-size: 0;
-  text-transform: lowercase; }
+  text-transform: lowercase;
+  position: fixed;
+  top: 0; }
+
+body.home .headerBox {
+  display: none; }
+  body.home .headerBox.sticky {
+    display: block; }
 
 .logoBox {
   display: inline-block;
   font-size: 15px;
-  width: 15%;
-  margin: 0;
+  margin: 0 3%;
   position: relative;
   text-transform: lowercase;
   vertical-align: middle; }
+  @media (max-width: 950px) {
+    .logoBox {
+      float: left; } }
   .logoBox a {
     color: rgba(0, 0, 0, 0.8); }
 
@@ -306,15 +333,12 @@ ul.menu {
 
 div.arrow {
   display: inline-block;
-  width: 85%;
+  width: 80%;
   padding-right: 3px;
   cursor: pointer;
   position: relative;
   font-size: 16px;
   vertical-align: top; }
-  @media (max-width: 605px) {
-    div.arrow {
-      text-align: right; } }
 
 .headArrow {
   font-weight: 300;
@@ -624,10 +648,15 @@ p.form-allowed-tags, .nocomments {
   padding: 0;
   font-size: 12px;
   font-weight: 400;
+  margin-right: 10px;
   text-transform: uppercase; }
   .demo h3 {
     padding: 0;
     color: rgba(0, 0, 0, 0.8); }
+  .demo:hover {
+    background: #626262;
+    color: white;
+    border: 2px solid rgba(0, 0, 0, 0.8); }
 
 .animate.visible {
   opacity: 1;
@@ -690,6 +719,8 @@ section {
 
 .aboutLink {
   color: rgba(0, 0, 0, 0.8);
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 10px 15px;
   -webkit-transition: all 0.2s;
           transition: all 0.2s; }
   .aboutLink:hover {
@@ -721,7 +752,11 @@ section {
 
 .readMore {
   color: rgba(0, 0, 0, 0.8);
-  font-style: italic; }
+  font-style: italic;
+  border: 2px solid rgba(0, 0, 0, 0.8);
+  padding: 10px 15px;
+  display: inline-block;
+  margin-top: 5px; }
 
 .blogPic {
   margin: 0 auto;
@@ -941,6 +976,9 @@ section {
   width: 75%;
   float: left;
   margin: 0 3%; }
+  .pageContent a {
+    text-decoration: none;
+    color: rgba(0, 0, 0, 0.8); }
   .pageContent .entry-title {
     margin: 0;
     padding: 0;
@@ -949,9 +987,6 @@ section {
     font-size: 25px;
     padding-bottom: 10px;
     border-bottom: 5px solid #626262; }
-    .pageContent .entry-title a {
-      text-decoration: none;
-      color: rgba(0, 0, 0, 0.8); }
 
 .entry-content {
   padding-bottom: 200px; }
@@ -1053,6 +1088,8 @@ section {
     display: none; }
   .wrapper {
     width: 99%; }
+  .sideBar {
+    margin-top: 5%; }
   .section {
     padding: 0; }
   .portfolio {
@@ -1077,7 +1114,13 @@ section {
   .imageHolder {
     width: 100%; }
   .pageContent {
-    margin-top: 5%; } }
+    margin-top: 5%; }
+  div.arrow {
+    text-align: right;
+    float: right;
+    width: 45%; }
+  .menu li {
+    padding: 0; } }
 
 @media (max-width: 850px) {
   .aboutSection {
@@ -1088,7 +1131,11 @@ section {
     width: 100%;
     float: none; }
   .imageHolder {
-    width: 100%; } }
+    width: 100%; }
+  .headerBox {
+    background: #f2f2f2; }
+  .nav {
+    background: #f2f2f2; } }
 
 @media (max-width: 605px) {
   .directionArrowRight, .directionArrowLeft {
@@ -1096,20 +1143,7 @@ section {
     width: 100%;
     margin-top: 5%; }
   .entry-content {
-    padding-bottom: 50px; }
-  .menu {
-    display: block; }
-  .nav {
-    right: 0;
-    display: block;
-    width: 100%;
-    z-index: 15; }
-    .nav li {
-      padding: 40px 10px;
-      font-size: 18px;
-      width: 100%; }
-      .nav li:hover {
-        background: #f2f2f2; } }
+    padding-bottom: 50px; } }
 
 @media (max-width: 600px) {
   .pageContent {

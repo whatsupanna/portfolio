@@ -65,6 +65,9 @@
 	.wrapper{
 		width:99%;
 	}
+	.sideBar{
+		margin-top: 5%;
+	}
 	.section{
 		padding:0;
 	}
@@ -90,6 +93,17 @@
 	.pageContent{
 		margin-top: 5%;
 	}
+	div.arrow{
+	  text-align: right;
+	  float:right;
+	  width:45%;
+	}
+	.menu{
+		li{
+		  padding: 0;
+		}
+	
+	}
 
 	
 }
@@ -107,6 +121,12 @@
 	.imageHolder{
 		width:100%;
 	}
+	.headerBox{
+		background: #f2f2f2;
+	}
+	.nav{
+		background: #f2f2f2;
+	}
 }
 @media(max-width: 605px){
 	.directionArrowRight, .directionArrowLeft{
@@ -117,24 +137,7 @@
 	.entry-content{
 		padding-bottom:50px;
 	}
-	.menu{
-		display: block;
-	}
-	.nav{
-		right:0;
-		display: block;
-		width:100%;
-		z-index: 15;
-		li{
-
-			padding:40px 10px;
-			font-size: 18px;
-			width:100%;
-			&:hover{
-				background: #f2f2f2;
-			}
-		}
-	}
+	
 }
 
 

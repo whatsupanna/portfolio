@@ -34,7 +34,7 @@
     </div>
   <?php } ?>
 <header>
-  <div class="containerBox clearfix">
+  <div class="containerBox headImage clearfix">
 
     <div class="headerBox clearfix animate">
       <div class="logoBox">

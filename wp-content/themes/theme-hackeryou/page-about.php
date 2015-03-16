@@ -65,7 +65,7 @@ get_header();  ?>
 				<li class="keyWords">Backbonejs</li>
 				<li class="keyWords">Angularjs</li>
 				<li class="keyWords">CoffeeScript</li>
-				<li class="keyWords">Node.js</li>
+				<li class="keyWords">Nodejs</li>
 				<li class="keyWords">WebGL</li>
 			
 			</ul> 
@@ -76,7 +76,7 @@ get_header();  ?>
 				<a href="https://twitter.com/whatsupanna"><li class="keyWords socialWords word1"><i class="fa fa-twitter"></i></li></a>
 				<a href="https://www.linkedin.com/in/whatsupanna"><li class="keyWords socialWords word2"><i class="fa fa-linkedin"></i></li></a>
 				<a href="https://github.com/whatsupanna"><li class="keyWords socialWords word3"><i class="fa fa-github"></i></li></a>
-				<a download href="wp-content/themes/theme-hackeryou/annamackenzieresume.pdf"><li class="keyWords socialWords word4">Resume PDF</li></a>
+				<a download href="<?php bloginfo('template_directory'); ?>/annamackenzieresume.pdf"><li class="keyWords socialWords word4">Resume PDF</li></a>
 			</ul>
 		</div>
 	</div>
