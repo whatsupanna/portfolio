@@ -389,7 +389,8 @@ p.form-allowed-tags, .nocomments { display:none; }
 
 .footerText{
   text-align: center;
-  color:black;
+  color:$black;
+  padding-bottom: 10px;
 }
 .footerNav{
   margin:0;
@@ -559,15 +560,14 @@ p.form-allowed-tags, .nocomments { display:none; }
     p {
       color:rgba(0,0,0,0.5);
       font-size: 25px;
-      padding:0 25px;
+      padding:0;
       font-weight: 300;
       line-height: 1.5;
     }
   } // bioContentAbout
 } // end bioContent
 .aboutLink{
-  color:black;
-  padding:10px 25px;
+  color:$black;
   transition:all 0.2s;
   &:hover{
     color:$grey;    

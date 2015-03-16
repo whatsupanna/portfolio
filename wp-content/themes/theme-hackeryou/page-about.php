@@ -44,7 +44,7 @@ get_header();  ?>
 				<li class="keyWords">Sass</li>
 				<li class="keyWords">Jade</li>
 				<li class="keyWords">Responsive Design</li>
-				<li class="keyWords">APis</li>
+				<li class="keyWords">APIs</li>
 				<li class="keyWords">Pair Programming</li>
 			</ul>
 		</div>
@@ -62,8 +62,8 @@ get_header();  ?>
 			<h2 class="listHeader" >I'm Super Interested In:</h2>
 			<ul class="readingList list clearfix">
 				<li class="keyWords">JavaScript!!!</li>
-				<li class="keyWords">Backbone.js</li>
-				<li class="keyWords">Angular.js</li>
+				<li class="keyWords">Backbonejs</li>
+				<li class="keyWords">Angularjs</li>
 				<li class="keyWords">CoffeeScript</li>
 				<li class="keyWords">Node.js</li>
 				<li class="keyWords">WebGL</li>
@@ -73,10 +73,9 @@ get_header();  ?>
 		<div class="socialBox block">
 			<h2 class="listHeader" >Connect With Me:</h2>
 			<ul class="socialList list clearfix">
-				<a href="#"><li class="keyWords socialWords">Facebook</li></a>
-				<a href="#"><li class="keyWords socialWords">Twitter</li></a>
-				<a href="#"><li class="keyWords socialWords">LinkedIn</li></a>
-				<a href="https://github.com/whatsupanna"><li class="keyWords socialWords">GitHub</li></a>	
+				<a href="https://twitter.com/whatsupanna"><li class="keyWords socialWords">Twitter</li></a>
+				<a href="https://www.linkedin.com/in/whatsupanna"><li class="keyWords socialWords">LinkedIn</li></a>
+				<a href="https://github.com/whatsupanna"><li class="keyWords socialWords">GitHub</li></a>
 				<a href="#"><li class="keyWords socialWords">Resume PDF</li></a>
 			</ul>
 		</div>

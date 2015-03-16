@@ -18,6 +18,9 @@
 		margin:0 auto;
 		float:none;
 	}
+	.aboutpageHeading{
+		margin-left: 10%;
+	}
 
 }
 @media (max-width: 989px){
@@ -78,9 +81,6 @@
 	.entry-content{
 		padding-bottom:50px;
 	}
-	// footer{
-	// 	padding-top: 100px;
-	// }
 }
 
 @media(max-width: 600px){
@@ -99,5 +99,14 @@
 @media (max-width: 500px){
   .nav{
   	right:0;
+  }
+  .featuredPost{
+  	width:100%;
+  }
+  .imageHolder{
+  	width:100%;
+  }
+  .footerContact{
+	font-size: 12px;
   }
 }

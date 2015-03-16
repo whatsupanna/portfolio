@@ -3,19 +3,21 @@
   	<div class="footerText">
 	  	<h3 class="footerTag">Get to know me even better</h3>
 	  	<ul class="footerNav">
-	  		<a href="">
+	  		<a href="https://twitter.com/whatsupanna">
 	  			<li class="socialFeet">Twitter</li>
 	  		</a>
-	  		<a href="">
+	  		<a href="https://github.com/whatsupanna">
 	  			<li class="socialFeet">GitHub</li>
 	  		</a>
-	  		<a href="">
+	  		<a href="https://www.linkedin.com/in/whatsupanna">
 	  			<li class="socialFeet">LinkedIn</li>
 	  		</a>
 	  	</ul>
-	    <p><span class="contactFoot">Email me</span> | whatsup@whatsupanna.com |<span class="contactFoot"> Call me</span> | 416-806-3158</p>
-	   
-	    <p>&copy; Whats Up Anna <?php echo date('Y'); ?> | Design inspired by <a class="designLink" href="http://pcurio.com/">Alex Bain</a></p>
+	  	<div class="footerContact">
+		    <p><span class="contactFoot">Email me</span> | whatsup@whatsupanna.com |<span class="contactFoot"> Call me</span> | 416-806-3158</p>
+		   
+		    <p>Design inspired by <a class="designLink" href="http://pcurio.com/">Alex Bain</a> |&copy; Whats Up Anna <?php echo date('Y'); ?></p>
+	    </div>
     </div>
   </div>
 </footer>

@@ -20,7 +20,6 @@ $(function(){
 
     $(window).on('scroll',function() {
 
-
     	$('.animate').each(function() {
     		// cache the current box
     		var $el = $(this);
