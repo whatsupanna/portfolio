@@ -14,9 +14,9 @@
 	  		</a>
 	  	</ul>
 	  	<div class="footerContact">
-		    <p><span class="contactFoot">Email me</span> | whatsup@whatsupanna.com |<span class="contactFoot"> Call me</span> | 416-806-3158</p>
+		    <p><span class="contactFoot foot1">Email me</span> | whatsup@whatsupanna.com |</p><p class="contacntFoot foot2"><span class="contactFoot"> Call me</span> | 416-806-3158 |</p>
 		   
-		    <p>Design inspired by <a class="designLink" href="http://pcurio.com/">Alex Bain</a> |&copy; Whats Up Anna <?php echo date('Y'); ?></p>
+		    <p class="foot1">Design inspired by <a class="designLink" href="http://pcurio.com/">Alex Bain</a></p><p class="foot2"> &copy; Whats Up Anna <?php echo date('Y'); ?></p>
 	    </div>
     </div>
   </div>

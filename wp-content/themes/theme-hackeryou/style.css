@@ -249,7 +249,7 @@ footer {
    ========================================================================== */
 header {
   width: 100%;
-  z-index: 999999999999999999999999999999999999; }
+  z-index: 9; }
 
 ul.menu {
   margin: 0;
@@ -277,8 +277,7 @@ ul.menu {
   background: white;
   padding: 25px;
   font-size: 0;
-  text-transform: lowercase;
-  z-index: 9999999999999999999999999999999999999; }
+  text-transform: lowercase; }
 
 .logoBox {
   display: inline-block;
@@ -327,7 +326,7 @@ div.arrow {
   width: 100%;
   left: 0;
   top: 0;
-  z-index: 99999999999999999999999999999999999999999999999999999999999999999999999999999999999999999;
+  z-index: 10;
   border-top: 0; }
 
 /* =============================================================================
@@ -659,7 +658,7 @@ section {
    ========================================================================== */
 .bio {
   padding: 100px 30px;
-  padding-top: 80px;
+  padding-top: 150px;
   margin: 0 auto;
   width: 80%; }
 
@@ -1015,15 +1014,28 @@ section {
   .bioContent.bioContentAbout {
     width: 100%;
     margin: 0 auto;
-    padding: 0 10px; }
+    padding: 0; }
+    .bioContent.bioContentAbout p {
+      margin: 0;
+      padding: 0; }
   .bioContent.bioContentImage {
     display: inline-block;
     width: 100%;
-    text-align: center; }
+    text-align: center;
+    margin: 0; }
   .bio {
+    padding: 0; }
+  .bioText {
+    margin: 0;
     padding: 0; } }
 
 @media (max-width: 950px) {
+  .headArrow {
+    display: none; }
+  .wrapper {
+    width: 99%; }
+  .section {
+    padding: 0; }
   .portfolio {
     -webkit-flex-direction: column;
     -webkit-box-orient: vertical;
@@ -1040,9 +1052,11 @@ section {
     width: 100%;
     height: auto; }
   .featuredPost {
-    width: 80%; }
+    width: 90%;
+    float: none;
+    padding: 50px 0; }
   .imageHolder {
-    width: 80%; }
+    width: 90%; }
   .pageContent {
     margin-top: 5%; } }
 
@@ -1050,7 +1064,12 @@ section {
   .aboutSection {
     padding-bottom: 50px; }
   .skillsContent {
-    padding-bottom: 80px; } }
+    padding-bottom: 80px; }
+  .featuredPost {
+    width: 95%;
+    float: none; }
+  .imageHolder {
+    width: 95%; } }
 
 @media (max-width: 605px) {
   .directionArrowRight, .directionArrowLeft {
@@ -1069,11 +1088,34 @@ section {
     padding-bottom: 20px; } }
 
 @media (max-width: 500px) {
+  .headerBox {
+    width: 100%; }
+  .menu {
+    display: block; }
   .nav {
-    right: 0; }
+    right: 0;
+    display: block;
+    width: 100%;
+    z-index: 15; }
+    .nav li {
+      padding: 40px 10px;
+      font-size: 18px;
+      width: 100%; }
+      .nav li:hover {
+        background: #f2f2f2; }
+  .menu-item {
+    padding: 35px 10px; }
   .featuredPost {
     width: 100%; }
   .imageHolder {
     width: 100%; }
   .footerContact {
-    font-size: 12px; } }
+    font-size: 20px; }
+  .foot1 {
+    width: 100%; }
+  .foot2 {
+    width: 100%; } }
+
+@media (max-width: 320px) {
+  .footerContact {
+    font-size: 15px; } }
