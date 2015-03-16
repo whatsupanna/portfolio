@@ -14,7 +14,9 @@
 	  		</a>
 	  	</ul>
 	  	<div class="footerContact">
-		    <p><span class="contactFoot foot1">Email me</span> | whatsup@whatsupanna.com |</p><p class="contacntFoot foot2"><span class="contactFoot"> Call me</span> | 416-806-3158 |</p>
+	  		<a href="mailto:annacmackenzie89@gmail.com">
+		    <p class="contactFoot"><span class="contactFeet foot1">Email me</span> | whatsup@whatsupanna.com |</p></a>
+		    <p class="contactFoot foot2"><span class="contactFeet"><a href="tel:4168063158">Call me</span> | 416-806-3158 |</p></a>
 		   
 		    <p class="foot1">Design inspired by <a class="designLink" href="http://pcurio.com/">Alex Bain</a></p><p class="foot2"> &copy; Whats Up Anna <?php echo date('Y'); ?></p>
 	    </div>

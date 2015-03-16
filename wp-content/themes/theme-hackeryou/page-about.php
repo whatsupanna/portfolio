@@ -73,10 +73,10 @@ get_header();  ?>
 		<div class="socialBox block">
 			<h2 class="listHeader" >Connect With Me:</h2>
 			<ul class="socialList list clearfix">
-				<a href="https://twitter.com/whatsupanna"><li class="keyWords socialWords">Twitter</li></a>
-				<a href="https://www.linkedin.com/in/whatsupanna"><li class="keyWords socialWords">LinkedIn</li></a>
-				<a href="https://github.com/whatsupanna"><li class="keyWords socialWords">GitHub</li></a>
-				<a href="#"><li class="keyWords socialWords">Resume PDF</li></a>
+				<a href="https://twitter.com/whatsupanna"><li class="keyWords socialWords word1"><i class="fa fa-twitter"></i></li></a>
+				<a href="https://www.linkedin.com/in/whatsupanna"><li class="keyWords socialWords word2"><i class="fa fa-linkedin"></i></li></a>
+				<a href="https://github.com/whatsupanna"><li class="keyWords socialWords word3"><i class="fa fa-github"></i></li></a>
+				<a download href="wp-content/themes/theme-hackeryou/annamackenzieresume.pdf"><li class="keyWords socialWords word4">Resume PDF</li></a>
 			</ul>
 		</div>
 	</div>

@@ -30,6 +30,18 @@
               'after' => '</div>'
             )); ?>
           </div><!-- .entry-content -->
+
+            <?php if( previous_post_link() ): ?>
+          
+          <div id="nav-below" class="navigation">
+            <div class="directionArrowLeft">
+              <p class="nav-previous"><?php previous_post_link('%link', '&larr; %title'); ?></p>
+            </div>
+    
+
+          <?php endif; ?>
+
+
           <div id="nav-below" class="navigation">
             <div class="directionArrowLeft">
               <p class="nav-previous"><?php previous_post_link('%link', '&larr; %title'); ?></p>

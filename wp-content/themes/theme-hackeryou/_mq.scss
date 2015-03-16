@@ -2,7 +2,7 @@
 @media (max-width: 1224px){
 	
 	.aboutPageContent{
-		width:80%;
+		width:95%;
 		// padding:0 50px;
 		float:none;
 		margin:0 auto;
@@ -14,12 +14,12 @@
 		// margin-left: 10%;
 	}
 	.aboutpagePicture{
-		max-width:80%;
+		max-width:95%;
 		margin:0 auto;
 		float:none;
 	}
 	.aboutpageHeading{
-		margin-left: 10%;
+		margin-left: 2.5%;
 	}
 
 }
@@ -45,8 +45,17 @@
 	.bioText{
 		margin:0;
 		padding:0;
+	}
+	.aboutWrapper{
+		width:96%;
 	}	
+	.skillsContent.block{
+		padding:0;
+		margin:0;
+		width:100%;
+	}
 }
+
 
 
 @media (max-width: 950px){
@@ -67,16 +76,16 @@
 	.portfolioBox{
 		-webkit-flex-direction: column;
 		 flex-direction: column;
-		 width:100%;
+		 width:90%;
 		 height:auto;
 	}
 	.featuredPost{
-		width:90%;
+		width:100%;
 		float:none;
 		padding:50px 0;
 	}
 	.imageHolder{
-		width:90%;
+		width:100%;
 	}
 	.pageContent{
 		margin-top: 5%;
@@ -92,11 +101,11 @@
 		padding-bottom: 80px;
 	}
 	.featuredPost{
-		width:95%;
+		width:100%;
 		float:none;
 	}
 	.imageHolder{
-		width:95%;
+		width:100%;
 	}
 }
 @media(max-width: 605px){
@@ -108,42 +117,63 @@
 	.entry-content{
 		padding-bottom:50px;
 	}
+	.menu{
+		display: block;
+	}
+	.nav{
+		right:0;
+		display: block;
+		width:100%;
+		z-index: 15;
+		li{
+
+			padding:40px 10px;
+			font-size: 18px;
+			width:100%;
+			&:hover{
+				background: #f2f2f2;
+			}
+		}
+	}
 }
+
 
 @media(max-width: 600px){
 	.pageContent{
 		margin-top: 10%;
+		float:none;
 	}
 	.sideBar{
 		margin-top: 10%;
+		float:none;
 	}
 	.singleListItems{
 		padding-bottom: 20px;
 	}
 }
 
+@media(max-width: 550px){
+	.sideBar{
+		width:90%;
+		margin-top: 10%;
+		padding-bottom: 5px;
+		border: none;
+		margin:0 auto;
+	}
+	.pageContent{
+		width:90%;
+		margin-top: 10%;
+	}
+}
+
 
 @media (max-width: 500px){
+  .loopWrapper{
+  	width:96%;
+  	margin:0 auto;
+  }
   .headerBox{
   	width:100%;
-  }
-  .menu{
-  	display: block;
-  }
-  .nav{
-  	right:0;
-  	display: block;
-  	width:100%;
-  	z-index: 15;
-  	li{
-
-  		padding:40px 10px;
-  		font-size: 18px;
-  		width:100%;
-  		&:hover{
-  			background: #f2f2f2;
-  		}
-  	}
   }
   .menu-item{
   	padding: 35px 10px;
@@ -154,8 +184,12 @@
   .imageHolder{
   	width:100%;
   }
+  .footerTag{
+  	font-size: 25px;
+  	padding-bottom: 20px;
+  }
   .footerContact{
-	font-size: 20px;
+	font-size: 18px;
   }
   .foot1{
   	width:100%;
@@ -164,6 +198,25 @@
   	width:100%;
   }
 }
+
+@media(max-width: 440px){
+	.loopWrapper{
+		margin-top: 15%;
+	}
+	.pageContent{
+		width:96%;
+	}
+	.sideBar{
+		margin-left: 5%;
+	}
+}
+@media(max-width: 440px){
+	.loopWrapper{
+		margin-top: 20%;
+	}
+}
+
+
 @media (max-width: 320px){
 	.footerContact{
 		font-size: 15px;

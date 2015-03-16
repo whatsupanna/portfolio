@@ -125,11 +125,21 @@ pre {
 footer {
   clear:both;
 }
-.contactFoot{
+.contactFeet{
   color:$grey;
 }
+.contactFoot{
+  color:$black;
+  p{ 
+    color:$black;
+  }
+  a{
+    text-decoration: none;
+    color:$black;
+  }
+}
 .contactFoot:hover{
-  color:black;
+  color:$black;
 }
 .designLink{
   text-decoration: none;
@@ -207,7 +217,7 @@ footer {
     position: relative;
     font-size: 16px;
     vertical-align: top;
-    @media (max-width: 500px){
+    @media (max-width: 605px){
       text-align: right;
     }
   }
@@ -428,7 +438,7 @@ p.form-allowed-tags, .nocomments { display:none; }
 }
 
 .portfolioBox{
-  width:95%;
+  width:100%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -667,25 +677,33 @@ p.form-allowed-tags, .nocomments { display:none; }
   padding-bottom: 150px;
   .listHeader{
     font-weight: 700;
-    margin-left: 2.5%;
+    margin-left: 1%;
     font-size: 12px;
     text-transform: uppercase;
   }
   .block{
-    width: 90%;
+    width: 100%;
     padding:10px 15px;
-    margin:4%;
+    padding-bottom: 3px;
+    margin-top:20px;
     background: #FBFBFB;
     .list{
       padding:0;
       margin:0;
       list-style:none;
       color:rgab(0,0,0,0.8);
-      padding:10px 15px;
-      box-shadow: 0 0 20px white;
       clear:both;
-      li.socialWords:hover{
-        background: #D43A32;
+      li.word1:hover{
+        background: #5CACEC;
+      }
+      li.word2:hover{
+        background: #066B9D;
+      }
+      li.word3:hover{
+        background: #444444;
+      }
+       li.word4:hover{
+        background: #D03231;
       }
       .keyWords{
         float:left;
@@ -699,7 +717,7 @@ p.form-allowed-tags, .nocomments { display:none; }
         background: $grey;
         border:none;
         text-transform: uppercase;
-        font-size: 10px;
+        font-size: 12px;
         font-weight:900;
       }
     }
