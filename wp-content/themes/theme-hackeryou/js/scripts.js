@@ -15,6 +15,8 @@ $(function(){
       var elemTop = $elem.offset().top;
       var elemBottom = elemTop + $elem.height();
 
+       // return (elemTop >= docViewTop);
+
       return ((elemBottom <= docViewBottom) && (elemTop >= docViewTop));
   }
 

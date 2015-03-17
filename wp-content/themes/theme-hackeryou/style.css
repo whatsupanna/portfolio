@@ -279,10 +279,11 @@ ul.menu {
   text-transform: lowercase; }
   @media (max-width: 950px) {
     .nav {
-      text-align: right;
+      text-align: center;
       right: 0;
-      display: block;
-      width: 100%; } }
+      top: 71px;
+      width: 100%;
+      position: absolute; } }
   .nav a {
     color: black; }
   .nav a:hover {
@@ -1065,7 +1066,8 @@ section {
     padding: 0; }
     .bioContent.bioContentAbout p {
       margin: 0;
-      padding: 0; }
+      padding: 0;
+      margin-bottom: 5%; }
   .bioContent.bioContentImage {
     display: inline-block;
     width: 100%;
@@ -1118,7 +1120,8 @@ section {
   div.arrow {
     text-align: right;
     float: right;
-    width: 45%; }
+    width: 45%;
+    position: static; }
   .menu li {
     padding: 0; } }
 

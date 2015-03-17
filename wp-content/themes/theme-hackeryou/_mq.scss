@@ -31,6 +31,7 @@
 		p{
 			margin:0;
 			padding:0;
+			margin-bottom: 5%;
 		}
 	}
 	.bioContent.bioContentImage{
@@ -97,6 +98,7 @@
 	  text-align: right;
 	  float:right;
 	  width:45%;
+	  position: static;
 	}
 	.menu{
 		li{
@@ -152,6 +154,12 @@
 	}
 	.singleListItems{
 		padding-bottom: 20px;
+	}
+}
+@media screen and (min-width: 500px){
+	.featuredPost{
+		transform:translateY(20%);
+		opacity: 1:
 	}
 }
 

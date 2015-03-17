@@ -182,10 +182,12 @@ footer {
     background: white ;
     text-transform: lowercase;
     @media (max-width: 950px){
-      text-align: right;
+      text-align: center;
       right:0;
-      display: block;
+      top: 71px;
+      // display: block;
       width:100%;
+      position: absolute;
     }
 
       a{
